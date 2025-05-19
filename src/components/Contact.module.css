@@ -1,0 +1,128 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--brand-gold);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.infoCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.infoItem {
+  margin-bottom: 1.25rem;
+}
+
+.infoItem:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--brand-black);
+}
+
+.phone {
+  font-size: 1.25rem;
+  color: var(--brand-gold);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.email {
+  color: #666;
+  text-decoration: underline;
+}
+
+.address {
+  color: #666;
+}
+
+.form {
+  background: var(--brand-grey);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--brand-gold);
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--brand-gold);
+  color: var(--brand-black);
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+  background: #ffd700;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .infoCard {
+    padding: 2.5rem;
+  }
+  
+  .form {
+    padding: 2rem;
+  }
+  
+  .input,
+  .textarea {
+    padding: 1rem;
+  }
+  
+  .submitButton {
+    padding: 1rem;
+  }
+} 

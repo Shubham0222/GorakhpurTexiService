@@ -1,0 +1,233 @@
+.detailPage {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.banner {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bannerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)); */
+  z-index: 2;
+}
+
+.sliderButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.sliderButton:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slideIndicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activeIndicator {
+  background: #FFD600;
+  transform: scale(1.2);
+}
+
+.bannerContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  color: white;
+  z-index: 3;
+}
+
+.bannerTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0;
+  color: #eee;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+
+.content {
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.mainContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.mainContent h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.overview, .details, .requirements {
+  margin-bottom: 2.5rem;
+}
+
+.overview p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.details ul, .requirements ul {
+  list-style: none;
+  padding: 0;
+}
+
+.details li, .requirements li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+  color: #555;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+}
+
+.details li:before, .requirements li:before {
+  content: "•";
+  color: #FFD600;
+  font-weight: bold;
+  margin-right: 0.8rem;
+}
+
+.sidebar {
+  position: sticky;
+  top: 2rem;
+}
+
+.infoCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.infoCard h3 {
+  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.infoCard ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.infoCard li {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+.infoCard li:last-child {
+  border-bottom: none;
+}
+
+.bookButton {
+  width: 100%;
+  padding: 1rem;
+  background: #FFD600;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bookButton:hover {
+  background: #e6c200;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 300px;
+  }
+
+  .bannerTitle {
+    font-size: 2.5rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+} 

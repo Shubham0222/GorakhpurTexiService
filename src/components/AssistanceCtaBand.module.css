@@ -1,0 +1,290 @@
+.band {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  background: linear-gradient(90deg, #FFD600 0%, #ffdd33 100%);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 1.4rem 2rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.text {
+  font-size: 1.25rem;
+  color: #181818;
+  font-weight: 700;
+  flex: 1;
+}
+
+.button {
+  background: #181818;
+  color: #FFD600;
+  font-weight: 700;
+  padding: 0.75rem 2.4rem;
+  border-radius: 999px;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  white-space: nowrap;
+}
+.button:hover {
+  transform: scale(1.04);
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .text {
+    font-size: 1.1rem;
+  }
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.section {
+  position: relative;
+  padding: 4rem 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/image/assistance-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.textContent {
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #FFD600;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: #fff;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contactItem {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.iconWrapper {
+  width: 60px;
+  height: 60px;
+  background: #FFD600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  fill: #333;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FFD600;
+}
+
+.value {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.value:hover {
+  color: #FFD600;
+}
+
+.getInTouch {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.getInTouch h3 {
+  font-size: 1.5rem;
+  color: #FFD600;
+  margin-bottom: 1rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  color: #FFD600;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .contactInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .links {
+    gap: 1rem;
+  }
+}
+
+.phoneNumber {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.countryCode {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #FFD600;
+}
+
+.number {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.city {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+}
+
+.state {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contactButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #FFD600;
+  color: #000;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.contactButton:hover {
+  background: #FFA000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.arrowIcon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.contactButton:hover .arrowIcon {
+  transform: translateX(5px);
+}

@@ -1,0 +1,222 @@
+.banner {
+  position: relative;
+  height: 80vh;
+  min-height: 600px;
+  background: url('/assets/image/banner-bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.textContent {
+  max-width: 800px;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.highlight {
+  color: #FFD600;
+  display: block;
+  font-size: 3.5rem;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #FFD600;
+  color: #333;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 214, 0, 0.3);
+}
+
+.primaryButton:hover {
+  background: #FFA000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 214, 0, 0.4);
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: transparent;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.arrowIcon {
+  width: 24px;
+  height: 24px;
+  fill: #333;
+  transition: transform 0.3s ease;
+}
+
+.primaryButton:hover .arrowIcon {
+  transform: translateX(5px);
+}
+
+.stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #FFD600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.statLabel {
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .banner {
+    height: 70vh;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .highlight {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: auto;
+    padding: 6rem 0;
+  }
+
+  .content {
+    gap: 3rem;
+  }
+
+  .title {
+    font-size: 2.8rem;
+  }
+
+  .highlight {
+    font-size: 2.4rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .statItem {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    padding: 4rem 0;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .highlight {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    justify-content: center;
+  }
+} 

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+  background: #fcfcfc;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --brand-black: #181818;
+  --brand-gold: #FFD600;
+  --brand-white: #ffffff;
+  --brand-grey: #F4F4F4;
+
+  --background: 0 0% 100%;
+  --foreground: 0 0% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 10%;
+  --primary: 48 100% 50%; /* gold */
+  --primary-foreground: 0 0% 10%; /* black */
+  --secondary: 0 0% 10%; /* black */
+  --secondary-foreground: 48 100% 50%; /* gold */
+  --muted: 0 0% 96%; /* light grey */
+  --muted-foreground: 0 0% 40%;
+  --accent: 48 100% 50%; /* gold */
+  --accent-foreground: 0 0% 10%; /* black */
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --ring: 48 100% 50%; /* gold */
+  --radius: 0.5rem;
+  --chart-1: 48 100% 50%; /* gold */
+  --chart-2: 0 0% 10%; /* black */
+  --chart-3: 0 0% 100%; /* white */
+  --chart-4: 0 0% 96%; /* grey */
+  --chart-5: 48 100% 50%; /* gold */
+}
+
+.dark {
+  --background: 0 0% 10%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 10%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 10%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 48 100% 50%; /* gold */
+  --primary-foreground: 0 0% 98%; /* white */
+  --secondary: 0 0% 98%; /* white */
+  --secondary-foreground: 48 100% 50%; /* gold */
+  --muted: 0 0% 20%;
+  --muted-foreground: 0 0% 70%;
+  --accent: 48 100% 50%; /* gold */
+  --accent-foreground: 0 0% 98%; /* white */
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+  --ring: 48 100% 50%; /* gold */
+  --chart-1: 48 100% 50%; /* gold */
+  --chart-2: 0 0% 98%; /* white */
+  --chart-3: 0 0% 10%; /* black */
+  --chart-4: 0 0% 20%; /* dark grey */
+  --chart-5: 48 100% 50%; /* gold */
+}
+
+a {
+  color: var(--brand-black);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: var(--brand-black);
+  margin: 0 0 0.6em 0;
+}
+
+/* Utility class for gold text */
+.gold {
+  color: black;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

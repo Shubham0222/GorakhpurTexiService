@@ -1,0 +1,433 @@
+.section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 4rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.logoSection {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logoWrapper {
+  width: 200px;
+  height: 200px;
+  background: white;
+  border-radius: 50%;
+  padding: 1rem;  
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.logoWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 214, 0, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.logoWrapper:hover {
+  transform: scale(1.05) rotate(5deg);
+  box-shadow: 0 12px 40px rgba(255, 214, 0, 0.2);
+}
+
+.logoWrapper:hover::before {
+  opacity: 1;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+.logoWrapper:hover .logo {
+  transform: scale(1.1);
+}
+
+.logoTitle {
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #FFD600, #FFA000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.logoTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #FFD600, #FFA000);
+  border-radius: 2px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.welcomeCol {
+  flex: 1 1 400px;
+  min-width: 300px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #FFD600, #FFA000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.text {
+  font-size: 1.1rem;
+  color: #2d2d2d;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 4px solid #FFD600;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.statItem {
+  text-align: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.statItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #FFD600, #FFA000);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.statItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(255, 214, 0, 0.15);
+}
+
+.statItem:hover::before {
+  opacity: 1;
+}
+
+.statNumber {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #FFD600, #FFA000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.carsCol {
+  flex: 1 1 600px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.carsHeading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFD600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.carsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.carCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.carImgWrapper {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.carImg {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.carName {
+  font-size: 1rem;
+  color: #2d2d2d;
+  font-weight: 600;
+  text-align: center;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
+  background: #f8f9fa;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.galleryImgWrapper {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  position: relative;
+}
+
+.galleryImgWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.galleryImgWrapper:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(255,214,0,0.2);
+}
+
+.galleryImgWrapper:hover::before {
+  opacity: 1;
+}
+
+.galleryImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.galleryImgWrapper:hover .galleryImg {
+  transform: scale(1.1);
+}
+
+.sliderWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  overflow: hidden;
+}
+
+.sliderImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  transition: transform 0.5s cubic-bezier(.4,2,.6,1);
+}
+
+.sliderImgFull {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  transition: transform 0.5s cubic-bezier(.4,2,.6,1);
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .carsCol {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .logoSection {
+    margin-bottom: 2rem;
+  }
+
+  .logoWrapper {
+    width: 160px;
+    height: 160px;
+  }
+
+  .logoTitle {
+    font-size: 2.2rem;
+  }
+
+  .container {
+    gap: 2rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .logoSection {
+    margin-bottom: 1.5rem;
+  }
+
+  .logoWrapper {
+    width: 140px;
+    height: 140px;
+  }
+
+  .logoTitle {
+    font-size: 1.8rem;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .galleryGrid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .galleryImgWrapper {
+    height: 200px;
+  }
+
+  .statNumber {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .galleryGrid {
+    grid-template-columns: 1fr;
+    padding: 0.5rem 0.1rem;
+    gap: 1rem;
+  }
+  .galleryImgWrapper {
+    height: 140px;
+  }
+  .sliderWrapper {
+    height: 140px;
+  }
+  .sliderImgFull {
+    height: 140px;
+  }
+}
