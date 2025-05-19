@@ -5,40 +5,64 @@ import styles from "./Destinations.module.css";
 
 const destinations = [
   {
+    id: 1,
     slug: "lumbini",
     title: "Gorakhpur to Lumbini Taxi Service",
-    desc: "Nepal Pilgrim Transfer",
-    image: "/assets/image/destinations/lumbini.jpg"
+    description: "Nepal Pilgrim Transfer",
+    image: "/assets/image/destinations/lumbini.jpg",
+    distance: "120 km from Gorakhpur",
+    duration: "3-4 hours",
+    bestTime: "October to March"
   },
   {
+    id: 2,
     slug: "gorakhnath",
     title: "Gorakhpur to Gorakhnath Temple Taxi Service",
-    desc: "Ancient temple dedicated to Guru Gorakhnath",
-    image: "/assets/image/destinations/gorakhnath-temple.jpg"
+    description: "Ancient temple dedicated to Guru Gorakhnath",
+    image: "/assets/image/destinations/gorakhnath-temple.jpg",
+    distance: "2 km from city center",
+    duration: "30 minutes",
+    bestTime: "All year round"
   },
   {
+    id: 3,
     slug: "pokhara",
     title: "Gorakhpur to Pokhara Taxi Service",
-    desc: "Nepal Tourist Route",
-    image: "/assets/image/destinations/pokhara.jpg"
+    description: "Nepal Tourist Route",
+    image: "/assets/image/destinations/pokhara.jpg",
+    distance: "385 km from Gorakhpur",
+    duration: "8-9 hours",
+    bestTime: "October to May"
   },
   {
+    id: 4,
     slug: "varanasi",
     title: "Gorakhpur to Varanasi Taxi Service",
-    desc: "Spiritual City",
-    image: "/assets/image/destinations/varanasi.jpg"
+    description: "Spiritual City",
+    image: "/assets/image/destinations/varanasi.jpg",
+    distance: "240 km from Gorakhpur",
+    duration: "5-6 hours",
+    bestTime: "October to March"
   },
   {
+    id: 5,
     slug: "lucknow",
     title: "Gorakhpur to Lucknow Taxi Service",
-    desc: "Uttar Pradesh Capital",
-    image: "/assets/image/destinations/lucknow.jpg"
+    description: "Uttar Pradesh Capital",
+    image: "/assets/image/destinations/lucknow.jpg",
+    distance: "270 km from Gorakhpur",
+    duration: "6-7 hours",
+    bestTime: "October to March"
   },
   {
+    id: 6,
     slug: "kathmandu",
     title: "Gorakhpur to Kathmandu Taxi Service",
-    desc: "Nepal Capital Transfer",
-    image: "https://t4.ftcdn.net/jpg/03/10/24/63/360_F_310246341_869grfwR1b87MN3qyFPe6yZZIRC83X31.jpg"
+    description: "Nepal Capital Transfer",
+    image: "/assets/image/destinations/kathmandu.jpg",
+    distance: "380 km from Gorakhpur",
+    duration: "8-9 hours",
+    bestTime: "October to May"
   },
   {
     slug: "ayodhya",
@@ -134,38 +158,55 @@ const destinations = [
 
 const Destinations = () => {
   return (
-    <main className={styles.main}>
-      <motion.h2 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
-        className={styles.title}
-      >
-        Popular Destinations
-      </motion.h2>
-      <ul className={styles.grid}>
-        {destinations.map((item, idx) => (
-          <Link to={`/destinations/${item.slug}`} key={item.slug} style={{ textDecoration: 'none' }}>
-            <motion.li
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
-              transition={{ duration: 0.5, delay: idx * 0.05 }}
-              whileHover={{ scale: 1.03, y: -5 }}
-              className={styles.card}
+    <section className={styles.section}>
+      <div className={styles.container}>
+        <motion.div 
+          className={styles.header}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className={styles.title}>Popular Destinations</h2>
+          <p className={styles.subtitle}>Explore our most popular taxi routes from Gorakhpur</p>
+        </motion.div>
+
+        <div className={styles.destinationsGrid}>
+          {destinations.map((destination, index) => (
+            <motion.div
+              key={destination.id}
+              className={styles.destinationCard}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className={styles.imageContainer}>
-                <img src={item.image} alt={item.title} className={styles.image} />
-              </div>
-              <div className={styles.content}>
-                <strong className={styles.cardTitle}>{item.title}</strong>
-                <span className={styles.cardDesc}>{item.desc}</span>
-              </div>
-            </motion.li>
-          </Link>
-        ))}
-      </ul>
-    </main>
+              <Link to={`/destinations/${destination.slug}`} className={styles.cardLink}>
+                <div className={styles.imageWrapper}>
+                  <img 
+                    src={destination.image} 
+                    alt={destination.title}
+                    className={styles.image}
+                  />
+                  <div className={styles.overlay}>
+                    <div className={styles.details}>
+                      <span className={styles.duration}>{destination.duration}</span>
+                      <span className={styles.distance}>{destination.distance}</span>
+                    </div>
+                  </div>
+                </div>
+                <div className={styles.content}>
+                  <h3 className={styles.destinationTitle}>{destination.title}</h3>
+                  <p className={styles.description}>{destination.description}</p>
+                  <div className={styles.metaInfo}>
+                    <span className={styles.bestTime}>Best Time: {destination.bestTime}</span>
+                  </div>
+                  <button className={styles.exploreButton}>Explore More</button>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

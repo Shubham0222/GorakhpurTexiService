@@ -28,15 +28,15 @@ const Header = () => {
       label: "Adventure Activities",
       submenu: [
         { path: "/adventure", label: "Activities in Nepal" },
-        { path: "/pokhara", label: "Activities in Pokhara" }
       ]
     },
     { 
       path: "/destinations", 
       label: "Destinations",
       submenu: [
+        { path: "/destinations", label: "Popular Destinations" },
         { path: "/FamousTouristPoints", label: "Famous Tourist Points" },
-        { path: "/destinations", label: "Popular Destinations" }
+        { path: "/pokhara", label: "Famous Tourist Points In Pokhara" }
       ]
     },
     { path: "/fare", label: "Drivers" },
@@ -146,11 +146,26 @@ const Header = () => {
                     <div className={styles.mobileSubmenu}>
                       <div className={styles.mobileNavLink}>Destinations</div>
                       <Link
+                        to="/destinations"
+                        className={styles.mobileSubmenuItem}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Popular Destinations
+                      </Link>
+                      <Link
                         to="/FamousTouristPoints"
                         className={styles.mobileSubmenuItem}
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Famous Tourist Points
+                      </Link>
+                      
+                      <Link
+                        to="/pokhara"
+                        className={styles.mobileSubmenuItem}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Famous Tourist Points In Pokhara
                       </Link>
 
                     </div>

@@ -1,20 +1,6 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Destinations from "./components/Destinations";
-import AdventureActivities from "./components/AdventureActivities";
-import AdventureDetail from "./components/AdventureDetail";
-import Fare from "./components/Fare";
-import Contact from "./components/Contact";
-import About from "./components/About";
-import Home from "./pages/Home";
-import PokharaAdventures from "./components/PokharaAdventures";
-import FamousTouristPoints from "./components/FamousTouristPoints";
-import ScrollToTop from './components/ScrollToTop';
-import DestinationDetailPage from './components/DestinationDetailPage';
-import FloatingButtons from './components/FloatingButtons';
-import ProfessionalDriversSection from "./components/ProfessionalDriversSection";
-import Footer from "./components/Footer";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from './Footer.module.css';
 
 // Import destinations data
 const destinations = [
@@ -156,13 +142,6 @@ const destinations = [
     image: "/assets/image/destinations/kolkata.jpg"
   },
   {
-    id: 18,
-    slug: "darjeeling-gangtok",
-    title: "Gorakhpur to Darjeeling & Gangtok Taxi Service",
-    description: "Hill Station Tour",
-    image: "/assets/image/destinations/darjeeling.jpg"
-  },
-  {
     id: 19,
     slug: "noida",
     title: "Gorakhpur to Noida Taxi Service",
@@ -185,41 +164,107 @@ const destinations = [
   }
 ];
 
-function App() {
+const Footer: React.FC = () => {
   // Split destinations into three sections
   const popularDestinations = destinations.slice(0, 6);
   const moreDestinations = destinations.slice(6, 12);
   const additionalDestinations = destinations.slice(12);
 
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="min-h-screen flex flex-col bg-[var(--brand-grey)]">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/destinations" element={<Destinations />} />
-          <Route path="/destinations/:slug" element={<DestinationDetailPage />} />
-          <Route path="/adventure" element={<AdventureActivities />} />
-          <Route path="/pokhara" element={<PokharaAdventures />} />
-          <Route path="/adventure/:id" element={<AdventureDetail />} />
-          <Route path="/FamousTouristPoints" element={<FamousTouristPoints />} />
-          <Route path="/fare" element={<ProfessionalDriversSection />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <FloatingButtons />
-        <section className="w-full bg-gradient-to-r from-yellow-400 to-yellow-200 py-10 px-6 flex flex-col items-center text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-[var(--brand-black)] mb-2">The Best Rates & Comfort Journey</h3>
-          <p className="md:max-w-2xl text-gray-800 mb-6">
-            Gorakhpur Airport Cab, Car Rental, Taxi Hire & Booking, Airport Pickup, Drop,<br/> 24/7 as per your convenience. <br/><b>Call:</b> <a href="tel:+918887537960" className="underline font-bold gold">+91 8887537960</a>
-          </p>
-          <a href="tel:+918887537960" className="rounded-full px-8 py-3 bg-[var(--brand-black)] text-[var(--brand-gold)] font-bold shadow hover:opacity-90 transition">Call Now</a>
-        </section>
-        <Footer />
-      </div>
-    </Router>
-  );
-}
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <div className={styles.mainContent}>
+          <div className={styles.brandSection}>
+            <div className={styles.logoContainer}>
+              <img 
+                src="/assets/image/logo.jpg" 
+                alt="Gorakhpur Taxi Service Logo" 
+                className={styles.logo}
+              />
+            </div>
+            <h2 className={styles.brandTitle}>Gorakhpur Taxi Service</h2>
+            <p className={styles.brandDescription}>
+              Your trusted partner for safe and comfortable travel in Gorakhpur and beyond. 
+              Experience premium taxi services with professional drivers.
+            </p>
+          </div>
 
-export default App;
+          <div className={styles.section}>
+            <h3 className={styles.sectionTitle}>Popular Routes</h3>
+            <ul className={styles.list}>
+              {popularDestinations.map((destination) => (
+                <li key={destination.id}>
+                  <Link 
+                    to={`/destinations/${destination.slug}`} 
+                    className={styles.link}
+                  >
+                    {destination.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className={styles.section}>
+            <h3 className={styles.sectionTitle}>More Routes</h3>
+            <ul className={styles.list}>
+              {moreDestinations.map((destination) => (
+                <li key={destination.id}>
+                  <Link 
+                    to={`/destinations/${destination.slug}`} 
+                    className={styles.link}
+                  >
+                    {destination.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className={styles.section}>
+            <h3 className={styles.sectionTitle}>Contact Us</h3>
+            <ul className={styles.contactList}>
+              <li className={styles.contactItem}>
+                <span className={styles.contactIcon}>📞</span>
+                <a href="tel:+918887537960" className={styles.contactHighlight}>
+                  +91 8887537960
+                </a>
+              </li>
+              <li className={styles.contactItem}>
+                <span className={styles.contactIcon}>✉️</span>
+                <a href="mailto:gorakhpurtaxibooking@gmail.com" className={styles.contactHighlight}>
+                  gorakhpurtaxibooking@gmail.com
+                </a>
+              </li>
+              <li className={styles.contactItem}>
+                <span className={styles.contactIcon}>📍</span>
+                <span className={styles.contactHighlight}>
+                  Head Office - Sanik Kunj, Sector B, Nandanagar Gorakhpur Uttar Pradesh
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className={styles.copyright}>
+          <p className={styles.copyrightText}>
+            &copy; {new Date().getFullYear()} Gorakhpur Taxi Service. All rights reserved.
+          </p>
+          {/* <div className={styles.socialLinks}>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+              Facebook
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+              Twitter
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+              Instagram
+            </a>
+          </div> */}
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer; 

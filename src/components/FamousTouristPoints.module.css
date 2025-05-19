@@ -1,6 +1,6 @@
 .touristPoints {
-  padding: 5rem 0;
-  background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+  padding: 4rem 0;
+  background-color: #f8f9fa;
 }
 
 .container {
@@ -16,7 +16,6 @@
 
 .title {
   font-size: 2.5rem;
-  font-weight: 800;
   color: #333;
   margin-bottom: 1rem;
 }
@@ -24,92 +23,55 @@
 .subtitle {
   font-size: 1.2rem;
   color: #666;
-  max-width: 600px;
-  margin: 0 auto;
 }
 
-.filterContainer {
-  margin-bottom: 3rem;
-}
-
-.filters {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.filterButton {
-  padding: 0.8rem 1.5rem;
-  border: 2px solid #FFD600;
-  border-radius: 25px;
-  background: transparent;
-  color: #333;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.filterButton:hover,
-.filterButton.active {
-  background: #FFD600;
-  color: #333;
-  transform: translateY(-2px);
-}
-
-.grid {
+.pointsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-.card {
+.pointCard {
   background: white;
-  border-radius: 15px;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-10px);
+.pointCard:hover {
+  transform: translateY(-5px);
 }
 
 .imageWrapper {
   position: relative;
-  height: 250px;
+  height: 200px;
   overflow: hidden;
 }
 
-.image {
+.pointImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-.card:hover .image {
-  transform: scale(1.1);
+.pointCard:hover .pointImage {
+  transform: scale(1.05);
 }
 
 .overlay {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
-  display: flex;
-  align-items: flex-end;
   padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
 }
 
-.category {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+.location {
   font-size: 0.9rem;
-  color: #333;
   font-weight: 500;
 }
 
@@ -118,83 +80,38 @@
 }
 
 .pointTitle {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.25rem;
   color: #333;
   margin-bottom: 0.5rem;
 }
 
-.location {
+.pointDescription {
+  font-size: 0.95rem;
   color: #666;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.description {
-  color: #666;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-
-.highlights {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.highlight {
-  background: #f8f9fa;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.exploreButton {
-  display: block;
-  background: #FFD600;
-  color: #333;
-  text-align: center;
-  padding: 0.8rem 1.5rem;
-  border-radius: 25px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.exploreButton:hover {
-  background: #e6c200;
-  transform: translateY(-2px);
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {
-  .touristPoints {
-    padding: 3rem 0;
+  .pointsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
   }
 
   .title {
     font-size: 2rem;
   }
 
-  .grid {
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pointsGrid {
     grid-template-columns: 1fr;
   }
 
-  .imageWrapper {
-    height: 200px;
-  }
-
-  .filters {
-    gap: 0.5rem;
-  }
-
-  .filterButton {
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
+  .title {
+    font-size: 1.75rem;
   }
 } 
