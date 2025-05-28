@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 import styles from './AssistanceCtaBand.module.css';
 
 const AssistanceCtaBand = () => {
+  const handleMapClick = () => {
+    window.open(`https://www.google.com/maps?q=26.751063,83.349249`, '_blank');
+  };
+
   return (
     <section className={styles.section}>
       <div className={styles.overlay}></div>
@@ -20,7 +24,8 @@ const AssistanceCtaBand = () => {
             Our customer support team is available 24/7 to help you with any questions or concerns
           </p>
           <div className={styles.contactInfo}>
-            <motion.div 
+            <motion.a 
+              href="mailto:support@bestgorakhpurtaxi.com"
               className={styles.contactItem}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -32,13 +37,15 @@ const AssistanceCtaBand = () => {
               </div>
               <div className={styles.contactDetails}>
                 <span className={styles.label}>Email Us</span>
-                <a href="mailto:gorakhpurtaxibooking@gmail.com" className={styles.value}>
-                  gorakhpurtaxibooking@gmail.com
-                </a>
+                <span className={styles.value}>
+                  support@bestgorakhpurtaxi.com
+                  bestgorakhpurtaxi@gmail.com
+                </span>
               </div>
-            </motion.div>
+            </motion.a>
 
-            <motion.div 
+            <motion.a 
+              href="tel:+919026793233"
               className={styles.contactItem}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -50,16 +57,18 @@ const AssistanceCtaBand = () => {
               </div>
               <div className={styles.contactDetails}>
                 <span className={styles.label}>Call Us</span>
-                <a href="tel:+918887537960" className={styles.value}>
-                  +91 8887537960
-                </a>
+                <span className={styles.value}>
+                  +91 9026793233
+                </span>
               </div>
-            </motion.div>
+            </motion.a>
 
             <motion.div 
               className={styles.contactItem}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={handleMapClick}
+              style={{ cursor: 'pointer' }}
             >
               <div className={styles.iconWrapper}>
                 <svg className={styles.icon} viewBox="0 0 24 24">
@@ -69,7 +78,7 @@ const AssistanceCtaBand = () => {
               <div className={styles.contactDetails}>
                 <span className={styles.label}>Visit Us</span>
                 <span className={styles.value}>
-                  Gorakhpur, Uttar Pradesh, India
+                  House No. 12, Dalmeal Mirzapur Gorakhpur, Uttar Pradesh, 273005
                 </span>
               </div>
             </motion.div>
@@ -78,13 +87,13 @@ const AssistanceCtaBand = () => {
             className={styles.contactButton}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={handleMapClick}
           >
-            Get in Touch
+            Visit Now
             <svg className={styles.arrowIcon} viewBox="0 0 24 24">
               <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
             </svg>
           </motion.button>
-          
         </motion.div>
       </div>
     </section>

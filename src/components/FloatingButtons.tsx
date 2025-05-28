@@ -6,7 +6,7 @@ const FloatingButtons = () => {
   const [isOpen, setIsOpen] = useState(false);
   
   // Phone number for both calling and WhatsApp
-  const phoneNumber = '+918887537960';
+  const phoneNumber = '+919026793233';
   
   // WhatsApp message template
   const whatsappMessage = 'Hello! I would like to book a taxi.';

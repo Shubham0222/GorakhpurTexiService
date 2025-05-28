@@ -65,8 +65,8 @@
 
 .section {
   position: relative;
-  padding: 4rem 2rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/image/assistance-bg.jpg');
+  padding: 4rem 1rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/image/contact-bg.jpg');
   background-size: cover;
   background-position: center;
   color: white;
@@ -94,109 +94,107 @@
 .title {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
   color: #FFD600;
+  margin-bottom: 1rem;
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 3rem;
-  color: #fff;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  opacity: 0.9;
 }
 
 .contactInfo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .contactItem {
   background: rgba(255, 255, 255, 0.1);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 1rem;
-  backdrop-filter: blur(10px);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.3s ease;
+  align-items: flex-start;
+  gap: 1rem;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.contactItem:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
 }
 
 .iconWrapper {
-  width: 60px;
-  height: 60px;
-  background: #FFD600;
+  background: var(--brand-gold);
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
 }
 
 .icon {
-  width: 30px;
-  height: 30px;
-  fill: #333;
+  width: 24px;
+  height: 24px;
+  fill: white;
 }
 
 .contactDetails {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+  text-align: left;
+  flex: 1;
+  min-width: 0;
 }
 
 .label {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #FFD600;
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0.25rem;
 }
 
 .value {
-  color: #fff;
-  text-decoration: none;
+  display: block;
   font-size: 1rem;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
-.value:hover {
-  color: #FFD600;
-}
-
-.getInTouch {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.getInTouch h3 {
-  font-size: 1.5rem;
-  color: #FFD600;
-  margin-bottom: 1rem;
-}
-
-.links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.link {
-  color: #fff;
-  text-decoration: none;
+.contactButton {
+  background: var(--brand-gold);
+  color: var(--brand-black);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
   font-size: 1.1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.link:hover {
-  color: #FFD600;
-  background: rgba(255, 255, 255, 0.1);
+.contactButton:hover {
+  background: #ffd700;
+  transform: translateY(-2px);
+}
+
+.arrowIcon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
 }
 
 @media (max-width: 768px) {
@@ -210,14 +208,29 @@
 
   .subtitle {
     font-size: 1rem;
+    margin-bottom: 2rem;
   }
 
   .contactInfo {
     grid-template-columns: 1fr;
   }
 
-  .links {
-    gap: 1rem;
+  .contactItem {
+    padding: 1.25rem;
+  }
+
+  .iconWrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .value {
+    font-size: 1rem;
   }
 }
 
@@ -257,34 +270,40 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-.contactButton {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
-  background: #FFD600;
-  color: #000;
-  padding: 1rem 2.5rem;
-  border-radius: 50px;
-  font-weight: 600;
+.getInTouch {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.getInTouch h3 {
+  font-size: 1.5rem;
+  color: #FFD600;
+  margin-bottom: 1rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
   font-size: 1.1rem;
-  border: none;
-  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-.contactButton:hover {
-  background: #FFA000;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-.arrowIcon {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-  transition: transform 0.3s ease;
+.link:hover {
+  color: #FFD600;
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.contactButton:hover .arrowIcon {
-  transform: translateX(5px);
+.emailLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }

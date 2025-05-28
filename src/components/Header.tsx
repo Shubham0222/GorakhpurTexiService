@@ -25,7 +25,7 @@ const Header = () => {
     { path: "/about", label: "About" },
     { 
       path: "/adventure", 
-      label: "Adventure Activities",
+      label: "Activities",
       submenu: [
         { path: "/adventure", label: "Activities in Nepal" },
       ]
@@ -35,27 +35,26 @@ const Header = () => {
       label: "Destinations",
       submenu: [
         { path: "/destinations", label: "Popular Destinations" },
-        { path: "/FamousTouristPoints", label: "Famous Tourist Points" },
-        { path: "/pokhara", label: "Famous Tourist Points In Pokhara" }
+        // { path: "/FamousTouristPoints", label: "Famous Tourist Points" },
+        // { path: "/pokhara", label: "Famous Tourist Points In Pokhara" }
       ]
     },
-    { path: "/fare", label: "Drivers" },
+    { path: "/fare", label: "Fleet Partners" },
     { path: "/contact", label: "Contact" }
   ];
 
   return (
     <header className={styles.header}>
       <div className={styles.marqueeWrapper}>
-        <div className={styles.marquee}>
-          India   ||   Nepal   ||   Bhutan   ||   Sikkim
+        <div className={styles.marquee}> Haridwar || Rishikesh || Nainital || Mussoorie || Pokhara || Kathmandu || Janakpur || Darjeeling || Gangtok || Sikkim || Jharkhand || Chhattisgarh || Bihar || Mustang || Jomsom || Muktinath || Ranikhet || Munsiyari || Varanasi || Ayodhya || Prayagraj
         </div>
       </div>
       <div className={styles.container}>
-        <Link to="/" className={styles.logo} aria-label="Gorakhpur Taxi Booking Home">
+        <Link to="/" className={styles.logo} aria-label="Best Gorakhpur Taxi">
           <img src="/assets/image/logo.jpg" alt="Gorakhpur Taxi Booking Logo" className={styles.logoImg} />
           <span className={styles.logoTextGroup}>
-            <span className={styles.logoTextMain}>Gorakhpur Taxi Booking</span>
-            <span className={styles.logoTextSub}>Tours and Travels</span>
+            <span className={styles.logoTextMain}>Best Gorakhpur Taxi</span>
+            <span className={styles.logoTextSub}>Nepal Tour Packages</span>
           </span>
         </Link>
 
@@ -105,7 +104,7 @@ const Header = () => {
                   onMouseEnter={() => setIsAdventureOpen(true)}
                   onMouseLeave={() => setIsAdventureOpen(false)}
                 >
-                  Adventure Activities
+                  Activities
                   <span className={styles.dropdownArrow}>▼</span>
                   {isAdventureOpen && (
                     <div className={styles.dropdown}>
@@ -152,7 +151,7 @@ const Header = () => {
                       >
                         Popular Destinations
                       </Link>
-                      <Link
+                      {/* <Link
                         to="/FamousTouristPoints"
                         className={styles.mobileSubmenuItem}
                         onClick={() => setIsMenuOpen(false)}
@@ -166,12 +165,12 @@ const Header = () => {
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Famous Tourist Points In Pokhara
-                      </Link>
+                      </Link> */}
 
                     </div>
                   ) : item.path === "/adventure" ? (
                     <div className={styles.mobileSubmenu}>
-                      <div className={styles.mobileNavLink}>Adventure Activities</div>
+                      <div className={styles.mobileNavLink}>Activities</div>
                       {item.submenu?.map((subItem) => (
                         <Link
                           key={subItem.path}

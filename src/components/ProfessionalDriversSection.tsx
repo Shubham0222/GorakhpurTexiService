@@ -27,7 +27,7 @@ const drivers: Driver[] = [
   { id: 13, src: "/assets/image/userimg/G_P13.jpg", name: "Umesh Pati Tripathi", role: "Airport Pickup", carNumber: "UP53 ET 6022", mobile: "+919434196310" },
   { id: 14, src: "/assets/image/userimg/G_P14.jpg", name: "Amit Paswan", role: "Outstation", carNumber: "UP53 HT 7177", mobile: "+919415834276" },
   { id: 15, src: "/assets/image/userimg/G_P15.jpg", name: "A N Shukla", role: "Local Driver", carNumber: "UP53 JT 0975", mobile: "+919910619968" },
-  { id: 16, src: "/assets/image/userimg/G_P16.jpg", name: "Ravikant Gautam", role: "Tour Specialist", carNumber: "UP53 FT 2590", mobile: "+918887537960" },
+  { id: 16, src: "/assets/image/userimg/G_P16.jpg", name: "Ravikant Gautam", role: "Tour Specialist", carNumber: "UP53 FT 2590", mobile: "+919026793233" },
   { id: 18, src: "/assets/image/userimg/G_P18.jpg", name: "Harikesh Yadav", role: "Professional Driver", carNumber: "UP53 FT 3790", mobile: "+919935455222" },
   { id: 19, src: "/assets/image/userimg/G_P19.jpg", name: "Ram Kishun Dubey", role: "Night Specialist", carNumber: "UP53 ET 3552", mobile: "+919867041585" },
   { id: 20, src: "/assets/image/userimg/G_P20.jpg", name: "Vijay ji", role: "Professional Driver", carNumber: "UP53 JT 2487", mobile: "+918303699195" },
@@ -41,8 +41,8 @@ const ProfessionalDriversSection = () => {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>Our Professional Drivers</h2>
-          <p className={styles.subtitle}>Meet our experienced and reliable drivers dedicated to your safe and comfortable journey</p>
+          <h2 className={styles.title}>Our well-behaved and expert professional fleet partners.</h2>
+          <p className={styles.subtitle}>Meet our well-behaved and expert professional fleet partners, dedicated to ensuring your safe and comfortable journey.</p>
         </div>
         <div className={styles.driversGrid}>
           {drivers.map(driver => (
@@ -58,7 +58,7 @@ const ProfessionalDriversSection = () => {
               <div className={styles.driverInfo}>
                 <div className={styles.driverName}>{driver.name}</div>
                 <div className={styles.driverCar}>Car: {driver.carNumber}</div>
-                <div className={styles.driverMobile}>Mobile: <a href={`tel:${driver.mobile}`}>{driver.mobile}</a></div>
+                {/* <div className={styles.driverMobile}>Mobile: <a href={`tel:${driver.mobile}`}>{driver.mobile}</a></div> */}
               </div>
             </motion.div>
           ))}
@@ -80,7 +80,7 @@ const ProfessionalDriversSection = () => {
                 <div className={styles.driverModalInfo}>
                   <div className={styles.driverName}>{selected.name}</div>
                   <div className={styles.driverCar}>Car: {selected.carNumber}</div>
-                  <div className={styles.driverMobile}>Mobile: <a href={`tel:${selected.mobile}`}>{selected.mobile}</a></div>
+                  {/* <div className={styles.driverMobile}>Mobile: <a href={`tel:${selected.mobile}`}>{selected.mobile}</a></div> */}
                 </div>
               </div>
             </motion.div>

@@ -45,9 +45,9 @@ const About = () => {
             transition={{ duration: 0.3 }}
             className={styles.textContent}
           >
-            <h3 className={styles.subtitle}>Your Trusted Taxi Service in Gorakhpur</h3>
+            <h3 className={styles.subtitle}>Trusted Taxi Service In Gorakhpur Since 2008</h3>
             <p className={styles.paragraph}>
-              Gorakhpur Taxi Booking is committed to providing the best-in-class taxi service in Gorakhpur and nearby destinations. Our experienced drivers, modern cars, transparent pricing, and 24/7 support ensure your ride is always smooth, safe, and affordable.
+              Best Gorakhpur Taxi is committed to providing the best-in-class taxi service in Gorakhpur and nearby destinations. Our experienced drivers, modern cars, transparent pricing, and 24/7 support ensure your ride is always smooth, safe, and affordable.
             </p>
             <p className={styles.paragraph}>
               Whether you need airport pickup, outstation journeys, or a city tour, trust us for professional, punctual, and courteous service every time.

@@ -1,5 +1,5 @@
 .topbar {
-  background: #181818;
+  background: #252525;
   color: #FFD600;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -71,14 +71,14 @@
   line-height: 1.1;
 }
 .logoTextMain {
-  font-size: 1.45rem;
+  font-size: 1.30rem;
   font-weight: 800;
   color: #FFD600;
   letter-spacing: 0.01em;
   font-family: 'Montserrat', Arial, sans-serif;
 }
 .logoTextSub {
-  font-size: 1.08rem;
+  font-size: 1.02rem;
   font-weight: 700;
   color: #ffffff;
   margin-top: 0.1rem;
@@ -144,8 +144,9 @@
 }
 
 .header {
-  background: var(--brand-black);
+  background: #252525;
   padding: 1rem;
+  /* padding-bottom: 0.6rem; */
   position: sticky;
   top: 0;
   z-index: 1000;

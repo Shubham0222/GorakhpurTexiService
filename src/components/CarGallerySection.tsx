@@ -6,75 +6,63 @@ import { getWhatsAppLink } from '../utils/whatsapp';
 const cars = [
   {
     id: 1,
-    name: 'Dzire',
+    name: 'Sedan',
     image: '/assets/image/cars/dzire.jpg',
     category: 'Sedan',
     features: ['Comfortable seating', 'Air conditioning', 'Spacious trunk'],
-    price: '₹2000/day'
+    rates: {
+      local: '₹499',
+      rental: '₹2200 (8 Hrs/80 km)',
+      outstation: '₹12/km'
+    }
   },
   {
     id: 2,
-    name: 'Amaze',
-    image: '/assets/image/cars/amaze.jpg',
-    category: 'Sedan',
-    features: ['Fuel efficient', 'Modern design', 'Smooth ride'],
-    price: '₹2100/day'
+    name: 'SUV Ertiga',
+    image: '/assets/image/cars/ertiga.jpg',
+    category: 'SUV',
+    features: ['7 seats', 'Family friendly', 'Large boot'],
+    rates: {
+      local: '₹999',
+      rental: '₹3200 (8 Hrs/80 km)',
+      outstation: '₹14/km'
+    }
   },
   {
     id: 3,
-    name: 'Zest',
-    image: '/assets/image/cars/zest.jpg',
-    category: 'Sedan',
-    features: ['Spacious interior', 'Good mileage', 'Comfort drive'],
-    price: '₹2200/day'
+    name: 'Innova',
+    image: '/assets/image/cars/innova.jpg',
+    category: 'Premium SUV',
+    features: ['8 seats', 'Premium comfort', 'Long trips'],
+    rates: {
+      local: '₹1299',
+      rental: '₹4200 (8 Hrs/80 km)',
+      outstation: '₹16/km'
+    }
   },
   {
     id: 4,
-    name: 'Ertiga',
-    image: '/assets/image/cars/ertiga.jpg',
-    category: 'MUV',
-    features: ['7 seats', 'Family friendly', 'Large boot'],
-    price: '₹2500/day'
+    name: 'Innova Crysta',
+    image: '/assets/image/cars/innova-crysta.webp',
+    category: 'Luxury SUV',
+    features: ['Luxury interior', '8 seats', 'Smooth ride'],
+    rates: {
+      local: '₹1600',
+      rental: '₹4500 (8 Hrs/80 km)',
+      outstation: '₹20/km'
+    }
   },
   {
     id: 5,
-    name: 'Innova',
-    image: '/assets/image/cars/innova.jpg',
-    category: 'MUV',
-    features: ['8 seats', 'Premium comfort', 'Long trips'],
-    price: '₹3000/day'
-  },
-  {
-    id: 6,
-    name: 'Chevrolet Tavera',
-    image: '/assets/image/cars/tavera.jpg',
-    category: 'SUV',
-    features: ['9 seats', 'Spacious', 'Reliable for groups'],
-    price: '₹2800/day'
-  },
-  {
-    id: 7,
-    name: 'Innova Crysta',
-    image: '/assets/image/cars/innova-crysta.webp',
-    category: 'MUV',
-    features: ['Luxury interior', '8 seats', 'Smooth ride'],
-    price: '₹3500/day'
-  },
-  {
-    id: 8,
-    name: 'Tempo Traveller',
+    name: 'Traveller (14 to 32 seats)',
     image: '/assets/image/cars/tempo-traveller.webp',
     category: 'Van',
-    features: ['12-17 seats', 'Group travel', 'Spacious & comfortable'],
-    price: '₹5000/day'
-  },
-  {
-    id: 9,
-    name: 'Tempo Urbania',
-    image: '/assets/image/cars/tempo-urbania.jpg',
-    category: 'Van',
-    features: ['13-17 seats', 'Modern design', 'Luxury group travel'],
-    price: '₹5500/day'
+    features: ['14-32 seats', 'Group travel', 'Spacious & comfortable'],
+    rates: {
+      local: '₹30/km',
+      rental: 'Contact for details',
+      outstation: '₹30-55/km'
+    }
   }
 ];
 
@@ -108,12 +96,11 @@ const CarGallerySection = () => {
                 <img src={car.image} alt={car.name} className={styles.carImage} />
                 <div className={styles.overlay}>
                   <span className={styles.category}>{car.category}</span>
-                  <span className={styles.price}>{car.price}</span>
                 </div>
               </div>
               <div className={styles.content}>
                 <h3 className={styles.carName}>{car.name}</h3>
-                <div className={styles.features}>
+                {/* <div className={styles.features}>
                   {car.features.map((feature, i) => (
                     <span key={i} className={styles.feature}>
                       <svg className={styles.checkIcon} viewBox="0 0 24 24">
@@ -122,6 +109,20 @@ const CarGallerySection = () => {
                       {feature}
                     </span>
                   ))}
+                </div> */}
+                <div className={styles.rates}>
+                  <div className={styles.rateItem}>
+                    <span className={styles.rateLabel}>Local:</span>
+                    <span className={styles.rateValue}>{car.rates.local}</span>
+                  </div>
+                  <div className={styles.rateItem}>
+                    <span className={styles.rateLabel}>Rental:</span>
+                    <span className={styles.rateValue}>{car.rates.rental}</span>
+                  </div>
+                  <div className={styles.rateItem}>
+                    <span className={styles.rateLabel}>Outstation:</span>
+                    <span className={styles.rateValue}>{car.rates.outstation}</span>
+                  </div>
                 </div>
                 <motion.a 
                   href={getWhatsAppLink('car', `Car: ${car.name}`)}
@@ -141,7 +142,7 @@ const CarGallerySection = () => {
           ))}
         </div>
 
-        <motion.div 
+        {/* <motion.div 
           className={styles.ctaSection}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -159,7 +160,7 @@ const CarGallerySection = () => {
               <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
             </svg>
           </motion.button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

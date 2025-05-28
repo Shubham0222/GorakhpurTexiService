@@ -4,12 +4,12 @@ import styles from './StatStrip.module.css';
 
 const stats = [
   {
-    value: 5,
+    value: 16,
     suffix: '+',
     label: 'Years Experience'
   },
   {
-    value: 1800,
+    value: 12000,
     suffix: '+',
     label: 'Happy Customers'
   },
