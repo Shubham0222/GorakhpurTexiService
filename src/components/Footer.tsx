@@ -293,8 +293,8 @@ const destinations = [
 const Footer: React.FC = () => {
   // Split destinations into three sections
   const popularDestinations = destinations.slice(0, 12);
-  const moreDestinations = destinations.slice(12, 24);
-  const additionalDestinations = destinations.slice(24);
+  const moreDestinations = destinations.slice(12);
+  //const additionalDestinations = destinations.slice(24);
 
   return (
     <footer className={styles.footer}>
@@ -309,10 +309,10 @@ const Footer: React.FC = () => {
               />
             </div>
             <h2 className={styles.brandTitle}>Best Gorakhpur Taxi</h2>
-            <p className={styles.brandDescription}>
+            {/* <p className={styles.brandDescription}>
               Your trusted partner for safe and comfortable travel in Gorakhpur and beyond. 
               Experience premium taxi services with professional drivers.
-            </p>
+            </p> */}
           </div>
 
           <div className={styles.destinationsGrid}>
@@ -324,6 +324,12 @@ const Footer: React.FC = () => {
                     <Link 
                       to={`/destinations/${destination.slug}`} 
                       className={styles.link}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const message = `I want taxi for ${destination.title}`;
+                        const whatsappUrl = `https://wa.me/919026793233?text=${encodeURIComponent(message)}`;
+                        window.open(whatsappUrl, '_blank');
+                      }}
                     >
                       {destination.title}
                     </Link>
@@ -340,6 +346,12 @@ const Footer: React.FC = () => {
                     <Link 
                       to={`/destinations/${destination.slug}`} 
                       className={styles.link}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const message = `I want taxi for ${destination.title}`;
+                        const whatsappUrl = `https://wa.me/919026793233?text=${encodeURIComponent(message)}`;
+                        window.open(whatsappUrl, '_blank');
+                      }}
                     >
                       {destination.title}
                     </Link>
@@ -349,51 +361,35 @@ const Footer: React.FC = () => {
             </div>
 
             <div className={styles.section}>
-              <h3 className={styles.sectionTitle}>Additional Routes</h3>
-              <ul className={styles.list}>
-                {additionalDestinations.map((destination) => (
-                  <li key={destination.id}>
-                    <Link 
-                      to={`/destinations/${destination.slug}`} 
-                      className={styles.link}
-                    >
-                      {destination.title}
-                    </Link>
-                  </li>
-                ))}
+              <h3 className={styles.sectionTitle}>Contact Us</h3>
+              <ul className={styles.contactList}>
+                <li className={styles.contactItem}>
+                  <span className={styles.contactIcon}>📞</span>
+                  <a href="tel:+919026793233" className={styles.contactHighlight}>
+                    +91 9026793233
+                  </a>
+                </li>
+                <li className={styles.contactItem}>
+                  <span className={styles.contactIcon}>✉️</span>
+                  <div className={styles.emailLinks}>
+                    <a href="mailto:support@bestgorakhpurtaxi.com" className={styles.contactHighlight}>
+                      support@bestgorakhpurtaxi.com
+                    </a>
+                    <a href="mailto:bestgorakhpurtaxi@gmail.com" className={styles.contactHighlight}>
+                      bestgorakhpurtaxi@gmail.com
+                    </a>
+                  </div>
+                </li>
+                <li className={`${styles.contactItem} ${styles.address}`}>
+                  <span className={styles.contactIcon}>📍</span>
+                  <span className={styles.contactHighlight}>
+                    Head Office - House No. 12,<br />
+                    Dalmeal Mirzapur Gorakhpur,<br />
+                    Uttar Pradesh, 273005
+                  </span>
+                </li>
               </ul>
             </div>
-          </div>
-
-          <div className={styles.section}>
-            <h3 className={styles.sectionTitle}>Contact Us</h3>
-            <ul className={styles.contactList}>
-              <li className={styles.contactItem}>
-                <span className={styles.contactIcon}>📞</span>
-                <a href="tel:+919026793233" className={styles.contactHighlight}>
-                  +91 9026793233
-                </a>
-              </li>
-              <li className={styles.contactItem}>
-                <span className={styles.contactIcon}>✉️</span>
-                <div className={styles.emailLinks}>
-                  <a href="mailto:support@bestgorakhpurtaxi.com" className={styles.contactHighlight}>
-                    support@bestgorakhpurtaxi.com
-                  </a>
-                  <a href="mailto:bestgorakhpurtaxi@gmail.com" className={styles.contactHighlight}>
-                    bestgorakhpurtaxi@gmail.com
-                  </a>
-                </div>
-              </li>
-              <li className={`${styles.contactItem} ${styles.address}`}>
-                <span className={styles.contactIcon}>📍</span>
-                <span className={styles.contactHighlight}>
-                  Head Office - House No. 12,<br />
-                  Dalmeal Mirzapur Gorakhpur,<br />
-                  Uttar Pradesh, 273005
-                </span>
-              </li>
-            </ul>
           </div>
         </div>
 

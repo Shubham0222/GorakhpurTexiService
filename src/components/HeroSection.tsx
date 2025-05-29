@@ -45,7 +45,7 @@ const HeroSection = () => {
         viewport={{ once: false }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        Find Your Ride with <span className={styles.gold}>Gorakhpur Taxi Booking</span>
+        Find Your Ride with <span className={styles.gold}>Best Gorakhpur Taxi</span>
       </motion.h1>
       <motion.p
         className={styles.subtitle}

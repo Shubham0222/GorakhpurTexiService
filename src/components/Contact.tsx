@@ -1,8 +1,69 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
+import emailjs from '@emailjs/browser';
 import styles from "./Contact.module.css";
 
 const Contact = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const [status, setStatus] = useState({
+    submitting: false,
+    submitted: false,
+    error: false
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus({ submitting: true, submitted: false, error: false });
+
+    // Validate form data
+    if (!formData.name || !formData.email || !formData.phone || !formData.message) {
+      console.error('Form validation failed:', formData);
+      setStatus({ submitting: false, submitted: false, error: true });
+      return;
+    }
+
+    try {
+      console.log('Sending form data:', formData);
+
+      // Send email to admin
+      const adminResponse = await emailjs.sendForm(
+        'service_tkzamlj',
+        'template_noxpo18',
+        formRef.current!,
+        'j6uLqy9d8m4i9mxPP'
+      );
+      console.log('Admin email sent:', adminResponse);
+
+      // Send thank you email to customer
+      const customerResponse = await emailjs.sendForm(
+        'service_tkzamlj',
+        'template_lfu6pna',
+        formRef.current!,
+        'j6uLqy9d8m4i9mxPP'
+      );
+      console.log('Customer email sent:', customerResponse);
+
+      setStatus({ submitting: false, submitted: true, error: false });
+      setFormData({ name: '', email: '', phone: '', message: '' });
+    } catch (error) {
+      console.error('Email sending error:', error);
+      setStatus({ submitting: false, submitted: false, error: true });
+    }
+  };
+
   return (
     <main className={styles.main}>
       <div className={styles.container}>
@@ -31,7 +92,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div className={styles.infoContent}>
-                  <h3 className={styles.infoTitle}>Name</h3>
+                  <h3 className={styles.infoTitle}>Owner</h3>
                   <p className={styles.infoValue}>Shailesh Bharti</p>
                 </div>
               </div>
@@ -81,56 +142,91 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-
-            <motion.form 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className={styles.form}
-            >
-              <div className={styles.formGroup}>
-                <input 
-                  className={styles.input} 
-                  type="text" 
-                  placeholder="Your Name"
-                  required 
-                />
-              </div>
-              <div className={styles.formGroup}>
-                <input 
-                  className={styles.input} 
-                  type="email" 
-                  placeholder="Your Email"
-                  required 
-                />
-              </div>
-              <div className={styles.formGroup}>
-                <input 
-                  className={styles.input} 
-                  type="tel" 
-                  placeholder="Your Phone"
-                  required 
-                />
-              </div>
-              <div className={styles.formGroup}>
-                <textarea 
-                  className={styles.textarea} 
-                  placeholder="Your Message"
-                  required 
-                />
-              </div>
-              <motion.button 
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                type="submit" 
-                className={styles.submitButton}
-              >
-                Send Message
-              </motion.button>
-            </motion.form>
           </motion.div>
 
-          <motion.div 
+          <motion.form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className={styles.form}
+          >
+            <div className={styles.formGroup}>
+              <input 
+                className={styles.input} 
+                type="text" 
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Your Name"
+                required 
+              />
+            </div>
+            <div className={styles.formGroup}>
+              <input 
+                className={styles.input} 
+                type="email" 
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Your Email"
+                required 
+              />
+            </div>
+            <div className={styles.formGroup}>
+              <input 
+                className={styles.input} 
+                type="tel" 
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Your Phone"
+                required 
+              />
+            </div>
+            <div className={styles.formGroup}>
+              <textarea 
+                className={styles.textarea} 
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Your Message"
+                required 
+              />
+            </div>
+            <motion.button 
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              type="submit" 
+              className={styles.submitButton}
+              disabled={status.submitting}
+            >
+              {status.submitting ? 'Sending...' : 'Send Message'}
+            </motion.button>
+
+            {status.submitted && (
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className={styles.successMessage}
+              >
+                Thank you for your message! We'll get back to you soon.
+              </motion.div>
+            )}
+
+            {status.error && (
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className={styles.errorMessage}
+              >
+                Sorry, there was an error sending your message. Please try again.
+              </motion.div>
+            )}
+          </motion.form>
+
+          <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}

@@ -70,7 +70,7 @@
 }
 
 .brandTitle {
-  font-size: 1.75rem;
+  font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   background: linear-gradient(to right, var(--brand-gold), #ffd700);

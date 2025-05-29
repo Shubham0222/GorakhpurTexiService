@@ -119,7 +119,7 @@ const destinations = [
     slug: "patna",
     title: "Gorakhpur to Patna Taxi Service",
     description: "Bihar Capital",
-    image: "/assets/image/destinations/patna.jpg",
+    image: "/assets/image/popularDestination/patna.jpg",
     distance: "320 km from Gorakhpur",
     duration: "7-8 hours",
     bestTime: "October to March"
@@ -129,7 +129,7 @@ const destinations = [
     slug: "ranchi",
     title: "Gorakhpur to Ranchi Taxi Service",
     description: "Jharkhand Capital",
-    image: "/assets/image/destinations/ranchi.jpg",
+    image: "/assets/image/popularDestination/ranchi.jpg",
     distance: "450 km from Gorakhpur",
     duration: "10-11 hours",
     bestTime: "October to March"
@@ -139,7 +139,7 @@ const destinations = [
     slug: "kolkata",
     title: "Gorakhpur to Kolkata Taxi Service",
     description: "City of Joy",
-    image: "/assets/image/destinations/kolkata.jpg",
+    image: "/assets/image/popularDestination/kolkatta.jpg",
     distance: "650 km from Gorakhpur",
     duration: "14-15 hours",
     bestTime: "October to March"
@@ -149,7 +149,7 @@ const destinations = [
     slug: "darjeeling-gangtok",
     title: "Gorakhpur to Darjeeling & Gangtok Taxi Service",
     description: "Hill Station Tour",
-    image: "/assets/image/destinations/darjeeling.jpg",
+    image: "/assets/image/popularDestination/darjeeling.jpg",
     distance: "550 km from Gorakhpur",
     duration: "12-13 hours",
     bestTime: "October to May"
@@ -159,7 +159,7 @@ const destinations = [
     slug: "noida",
     title: "Gorakhpur to Noida Taxi Service",
     description: "Delhi NCR Business Hub",
-    image: "/assets/image/destinations/noida.jpg",
+    image: "/assets/image/popularDestination/noida.jpg",
     distance: "750 km from Gorakhpur",
     duration: "15-16 hours",
     bestTime: "October to March"
@@ -169,7 +169,7 @@ const destinations = [
     slug: "nainital",
     title: "Gorakhpur to Nainital Taxi Service",
     description: "Lake District of India",
-    image: "/assets/image/destinations/nainital.jpg",
+    image: "/assets/image/popularDestination/nainital.jpg",
     distance: "400 km from Gorakhpur",
     duration: "9-10 hours",
     bestTime: "October to May"
@@ -179,7 +179,7 @@ const destinations = [
     slug: "char-dham",
     title: "Gorakhpur to Char Dham Taxi Service",
     description: "Himalayan Pilgrimage",
-    image: "/assets/image/destinations/char-dham.jpg",
+    image: "/assets/image/popularDestination/char-dham.jpg",
     distance: "500 km from Gorakhpur",
     duration: "11-12 hours",
     bestTime: "May to June, September to October"
@@ -216,12 +216,12 @@ const Destinations = () => {
                     alt={destination.title}
                     className={styles.image}
                   />
-                  <div className={styles.overlay}>
+                  {/* <div className={styles.overlay}>
                     <div className={styles.details}>
                       <span className={styles.duration}>{destination.duration}</span>
                       <span className={styles.distance}>{destination.distance}</span>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className={styles.content}>
                   <h3 className={styles.destinationTitle}>{destination.title}</h3>

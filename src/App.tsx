@@ -187,26 +187,96 @@ const destinations = [
 ];
 
 function App() {
-  // Split destinations into three sections
-
-
   return (
     <Router>
       <ScrollToTop />
-      <PageMetadata />
       <div className="min-h-screen flex flex-col bg-[var(--brand-grey)]">
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/destinations" element={<Destinations />} />
-          <Route path="/destinations/:slug" element={<DestinationDetailPage />} />
-          <Route path="/adventure" element={<AdventureActivities />} />
-          <Route path="/pokhara" element={<PokharaAdventures />} />
-          <Route path="/adventure/:id" element={<AdventureDetail />} />
-          <Route path="/FamousTouristPoints" element={<FamousTouristPoints />} />
-          <Route path="/fare" element={<ProfessionalDriversSection />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={
+            <>
+              <PageMetadata 
+                title="Best Taxi Service in Gorakhpur | Online Cab Booking"
+                description="Need a taxi in Gorakhpur? Book online for airport pickup, wedding car rental, and more. Affordable cab service like Uber and Ola."
+              />
+              <Home />
+            </>
+          } />
+          <Route path="/about" element={
+            <>
+              <PageMetadata 
+                title="About Us | Best Gorakhpur Taxi Service"
+                description="Learn about our premium taxi service in Gorakhpur. Professional drivers, modern fleet, and 24/7 support for all your travel needs."
+              />
+              <About />
+            </>
+          } />
+          <Route path="/destinations" element={
+            <>
+              <PageMetadata 
+                title="Popular Destinations | Gorakhpur Taxi Service"
+                description="Explore popular destinations from Gorakhpur. Book reliable taxi service to Lumbini, Kathmandu, Varanasi, and more."
+              />
+              <Destinations />
+            </>
+          } />
+          <Route path="/destinations/:slug" element={
+            <>
+              <PageMetadata />
+              <DestinationDetailPage />
+            </>
+          } />
+          <Route path="/adventure" element={
+            <>
+              <PageMetadata 
+                title="Adventure Activities | Gorakhpur Taxi Service"
+                description="Discover exciting adventure activities in Nepal. Book our taxi service for comfortable travel to adventure destinations."
+              />
+              <AdventureActivities />
+            </>
+          } />
+          <Route path="/pokhara" element={
+            <>
+              <PageMetadata 
+                title="Pokhara Adventures | Gorakhpur Taxi Service"
+                description="Explore Pokhara's famous tourist points. Book our taxi service for a comfortable journey to Pokhara's attractions."
+              />
+              <PokharaAdventures />
+            </>
+          } />
+          <Route path="/adventure/:id" element={
+            <>
+              <PageMetadata />
+              <AdventureDetail />
+            </>
+          } />
+          <Route path="/FamousTouristPoints" element={
+            <>
+              <PageMetadata 
+                title="Famous Tourist Points | Gorakhpur Taxi Service"
+                description="Visit famous tourist points in Nepal. Book our taxi service for convenient travel to popular attractions."
+              />
+              <FamousTouristPoints />
+            </>
+          } />
+          <Route path="/fare" element={
+            <>
+              <PageMetadata 
+                title="Fleet Partners | Gorakhpur Taxi Service"
+                description="Explore our fleet of modern vehicles. Choose from various car options for your journey from Gorakhpur."
+              />
+              <ProfessionalDriversSection />
+            </>
+          } />
+          <Route path="/contact" element={
+            <>
+              <PageMetadata 
+                title="Contact Us | Gorakhpur Taxi Service"
+                description="Get in touch with us for taxi bookings and inquiries. 24/7 customer support for all your travel needs."
+              />
+              <Contact />
+            </>
+          } />
         </Routes>
         <FloatingButtons />
         <section className="w-full bg-gradient-to-r from-yellow-400 to-yellow-200 py-10 px-6 flex flex-col items-center text-center">
