@@ -59,9 +59,9 @@ const HomeFamousTouristPoints = () => {
             >
               <div className={styles.imageWrapper}>
                 <img src={point.image} alt={point.title} className={styles.image} />
-                <div className={styles.overlay}>
+                {/* <div className={styles.overlay}>
                   <span className={styles.category}>{point.category}</span>
-                </div>
+                </div> */}
               </div>
               <div className={styles.content}>
                 <h3 className={styles.title}>{point.title}</h3>
@@ -72,15 +72,15 @@ const HomeFamousTouristPoints = () => {
                     <span key={i} className={styles.highlight}>{highlight}</span>
                   ))}
                 </div>
-                <a href={`/tourist-point/${point.id}`} className={styles.exploreButton}>
+                {/* <a href={`/tourist-point/${point.id}`} className={styles.exploreButton}>
                   Explore More
-                </a>
+                </a> */}
               </div>
             </motion.div>
           ))}
         </div>
 
-        <motion.div 
+        {/* <motion.div 
           className={styles.viewAllButton}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -90,7 +90,7 @@ const HomeFamousTouristPoints = () => {
           <a href="/FamousTouristPoints" className={styles.button}>
             View All Tourist Points
           </a>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

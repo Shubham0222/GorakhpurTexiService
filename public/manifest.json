@@ -1,0 +1,27 @@
+{
+  "name": "Best Gorakhpur Taxi",
+  "short_name": "Gorakhpur Taxi",
+  "description": "Best taxi service in Gorakhpur for airport pickup, wedding car rental, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#FFD600",
+  "icons": [
+    {
+      "src": "/assets/image/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/image/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "orientation": "portrait",
+  "categories": ["travel", "transportation"],
+  "lang": "en-IN",
+  "dir": "ltr"
+} 

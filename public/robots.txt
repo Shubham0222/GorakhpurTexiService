@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+Allow: /destinations/
+Allow: /about/
+Allow: /contact/
+Allow: /adventure/
+Allow: /pokhara/
+Allow: /fare/
+
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /temp/
+Disallow: /draft/
+
+# Sitemap
+Sitemap: https://bestgorakhpurtaxi.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10 
