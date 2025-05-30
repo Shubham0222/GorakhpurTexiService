@@ -8,7 +8,7 @@ const activities = [
     id: 1,
     title: 'Paragliding',
     description: 'Experience the thrill of flying like a bird over the beautiful landscapes of Nepal.',
-    image: '/assets/image/adventure/paragliding/Card.jpg',
+    image: '/assets/image/adventure/paragliding/P1_Paragliding.jpg',
     duration: '1-2 hours',
     difficulty: 'Beginner friendly',
     location: 'Pokhara, Nepal',
@@ -24,7 +24,7 @@ const activities = [
     id: 2,
     title: 'Bungee Jumping',
     description: 'Take the ultimate leap of faith from one of the highest bungee jumping spots in the world.',
-    image: '/assets/image/adventure/Bungee_Jumping/Card.jpg',
+    image: '/assets/image/adventure/Bungee_Jumping/P1.jpg',
     duration: '2-3 hours',
     difficulty: 'Moderate',
     location: 'Kushma, Nepal',
@@ -40,7 +40,7 @@ const activities = [
     id: 3,
     title: 'Trekking',
     description: 'Explore the majestic Himalayas through various trekking routes suitable for all levels.',
-    image: '/assets/image/adventure/Trekking/Card.jpg',
+    image: '/assets/image/adventure/Trekking/P1.jpg',
     duration: '4-15 days',
     difficulty: 'Moderate to Hard',
     location: 'Various locations in Nepal',
@@ -56,7 +56,7 @@ const activities = [
     id: 4,
     title: 'Mountaineering',
     description: 'Challenge yourself with professional mountaineering expeditions in the Himalayas.',
-    image: '/assets/image/adventure/Mountaineering/Card.jpg',
+    image: '/assets/image/adventure/Mountaineering/mounting.jpg',
     duration: '10-30 days',
     difficulty: 'Advanced',
     location: 'Various peaks in Nepal',
@@ -72,7 +72,7 @@ const activities = [
     id: 5,
     title: 'Rafting',
     description: 'Navigate through exciting rapids in Nepal\'s pristine rivers.',
-    image: '/assets/image/adventure/Rafting/Card.jpg',
+    image: '/assets/image/adventure/Rafting/rafting.jpg',
     duration: '1-3 days',
     difficulty: 'Moderate',
     location: 'Trishuli, Bhote Koshi, Kali Gandaki',
@@ -88,7 +88,7 @@ const activities = [
     id: 6,
     title: 'Jungle Safari',
     description: 'Experience wildlife through jeep safari, elephant safari, and walking safari in Nepal\'s national parks.',
-    image: '/assets/image/adventure/Jungle_Safari/Card.jpg',
+    image: '/assets/image/adventure/Jungle_Safari/jungle-safari.jpg',
     duration: '1-3 days',
     difficulty: 'Easy',
     location: 'Chitwan, Bardia National Parks',
@@ -104,7 +104,7 @@ const activities = [
     id: 7,
     title: 'Mountain Biking',
     description: 'Ride through scenic trails and challenging terrains of Nepal.',
-    image: '/assets/image/adventure/Mountain_Biking/Card.jpg',
+    image: '/assets/image/adventure/Mountain_Biking/mountain-biking.jpg',
     duration: 'Half-day to multi-day',
     difficulty: 'Moderate to Advanced',
     location: 'Kathmandu Valley, Mustang, Pokhara',
@@ -120,7 +120,7 @@ const activities = [
     id: 8,
     title: 'Rock Climbing',
     description: 'Test your skills on natural rock formations and artificial climbing walls.',
-    image: '/assets/image/adventure/Rock_Climbing/Card.jpg',
+    image: '/assets/image/adventure/Rock_Climbing/rock-climbing.jpg',
     duration: '2-4 hours',
     difficulty: 'Beginner to Advanced',
     location: 'Nagarjun Forest, Hattiban',
@@ -136,7 +136,7 @@ const activities = [
     id: 9,
     title: 'Zip-lining',
     description: 'Soar through the air on Nepal\'s longest and fastest zip lines.',
-    image: '/assets/image/adventure/Zip-lining/Card.jpg',
+    image: '/assets/image/adventure/Zip-lining/zip-lining.jpg',
     duration: '1-2 hours',
     difficulty: 'Easy',
     location: 'Sarangkot, Pokhara',
@@ -176,12 +176,12 @@ const AdventureActivities = () => {
               <Link to={`/adventure/${activity.id}`} className={styles.cardLink}>
                 <div className={styles.imageWrapper}>
                   <img src={activity.image} alt={activity.title} className={styles.activityImage} />
-                  <div className={styles.overlay}>
+                  {/* <div className={styles.overlay}>
                     <div className={styles.details}>
                       <span className={styles.duration}>{activity.duration}</span>
                       <span className={styles.difficulty}>{activity.difficulty}</span>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className={styles.content}>
                   <h3 className={styles.activityTitle}>{activity.title}</h3>

@@ -85,6 +85,7 @@
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .textContent {
@@ -102,11 +103,14 @@
   font-size: 1.1rem;
   margin-bottom: 3rem;
   opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contactInfo {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-bottom: 2rem;
 }
@@ -169,6 +173,7 @@
   word-wrap: break-word;
   overflow-wrap: break-word;
   hyphens: auto;
+  line-height: 1.4;
 }
 
 .contactButton {
@@ -184,6 +189,7 @@
   gap: 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-top: 1rem;
 }
 
 .contactButton:hover {
@@ -197,22 +203,45 @@
   fill: currentColor;
 }
 
-@media (max-width: 768px) {
+/* Tablet and smaller desktops */
+@media (max-width: 1024px) {
   .section {
-    padding: 3rem 1rem;
+    padding: 3.5rem 1rem;
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 2.2rem;
+  }
+
+  .contactInfo {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .section {
+    padding: 2.5rem 1rem;
+  }
+
+  .content {
+    padding: 0 0.5rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
   }
 
   .subtitle {
     font-size: 1rem;
     margin-bottom: 2rem;
+    padding: 0 0.5rem;
   }
 
   .contactInfo {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .contactItem {
@@ -230,7 +259,52 @@
   }
 
   .value {
+    font-size: 0.95rem;
+  }
+
+  .contactButton {
+    width: 100%;
+    justify-content: center;
+    padding: 0.875rem 1.5rem;
     font-size: 1rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .section {
+    padding: 2rem 0.75rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contactItem {
+    padding: 1rem;
+  }
+
+  .iconWrapper {
+    width: 36px;
+    height: 36px;
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .label {
+    font-size: 0.85rem;
+  }
+
+  .value {
+    font-size: 0.9rem;
   }
 }
 

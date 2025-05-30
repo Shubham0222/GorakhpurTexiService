@@ -56,12 +56,12 @@ const AdventurePreview = () => {
               <Link to={`/adventure/${activity.id}`} className={styles.cardLink}>
                 <div className={styles.imageWrapper}>
                   <img src={activity.image} alt={activity.title} className={styles.activityImage} />
-                  <div className={styles.overlay}>
+                  {/* <div className={styles.overlay}>
                     <div className={styles.details}>
                       <span className={styles.duration}>{activity.duration}</span>
                       <span className={styles.difficulty}>{activity.difficulty}</span>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className={styles.content}>
                   <h3 className={styles.activityTitle}>{activity.title}</h3>

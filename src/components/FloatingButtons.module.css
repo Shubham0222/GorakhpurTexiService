@@ -1,11 +1,17 @@
 .floatingContainer {
   position: fixed;
-  bottom: 20px;
+  top: 50%;
   right: 20px;
+  transform: translateY(-50%);
   display: flex;
-  flex-direction: column-reverse;
-  gap: 12px;
+  flex-direction: column;
+  gap: 16px;
   z-index: 1000;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
 }
 
 .floatingButton {
@@ -20,6 +26,8 @@
   text-decoration: none;
   border: none;
   outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
 .toggleButton {
@@ -47,14 +55,47 @@
   width: 28px;
   height: 28px;
   fill: #FFFFFF;
+  transition: transform 0.3s ease;
+}
+
+.tooltip {
+  position: absolute;
+  right: 70px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 6px 0 6px 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent rgba(0, 0, 0, 0.8);
+}
+
+.floatingButton:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  right: 65px;
 }
 
 /* Mobile Optimization */
 @media (max-width: 768px) {
   .floatingContainer {
-    bottom: 16px;
     right: 16px;
-    gap: 10px;
+    gap: 12px;
+    padding: 8px;
   }
 
   .floatingButton {
@@ -66,21 +107,32 @@
     width: 24px;
     height: 24px;
   }
+
+  .tooltip {
+    display: none;
+  }
 }
 
 /* Hover Effects */
 .floatingButton:hover {
+  transform: scale(1.1);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.floatingButton:hover .icon {
+  transform: scale(1.1);
 }
 
 /* Active State */
 .floatingButton:active {
+  transform: scale(0.95);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Add some breathing room at the bottom for mobile */
+/* Small mobile devices */
 @media (max-width: 480px) {
   .floatingContainer {
-    bottom: 24px;
+    right: 12px;
+    padding: 6px;
   }
 } 

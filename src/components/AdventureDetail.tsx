@@ -28,10 +28,10 @@ const activities: Activity[] = [
     image: '/assets/image/adventure/P1.jpg',
     bannerImage: '/assets/image/adventure/P1.jpg',
     sliderImages: [
-      '/assets/image/adventure/paragliding/P1.jpg',
-      '/assets/image/adventure/paragliding/P2.jpg',
-      '/assets/image/adventure/paragliding/P3.jpg',
-      '/assets/image/adventure/paragliding/P4.jpg'
+      '/assets/image/adventure/paragliding/P1_Paragliding.jpg',
+      // '/assets/image/adventure/paragliding/P2.jpg',
+      // '/assets/image/adventure/paragliding/P3.jpg',
+      // '/assets/image/adventure/paragliding/P4.jpg'
     ],
     duration: '1-2 hours',
     difficulty: 'Beginner friendly',
@@ -59,10 +59,10 @@ const activities: Activity[] = [
     image: '/assets/image/adventure/P1.jpg',
     bannerImage: '/assets/image/adventure/P1.jpg',
     sliderImages: [
-      '/assets/image/adventure/Bungee_Jumping/P1.jpg',
-      '/assets/image/adventure/Bungee_Jumping/P2.jpg',
-      '/assets/image/adventure/Bungee_Jumping/P3.jpg',
-      '/assets/image/adventure/Bungee_Jumping/P4.jpg'
+      '/assets/image/adventure/Bungee_Jumping/P1.jpg'
+      // '/assets/image/adventure/Bungee_Jumping/P2.jpg',
+      // '/assets/image/adventure/Bungee_Jumping/P3.jpg',
+      // '/assets/image/adventure/Bungee_Jumping/P4.jpg'
     ],
     duration: '2-3 hours',
     difficulty: 'Moderate',
@@ -90,10 +90,10 @@ const activities: Activity[] = [
     image: '/assets/image/rafting.jpg',
     bannerImage: '/assets/image/rafting-banner.jpg',
     sliderImages: [
-      '/assets/image/adventure/Rafting/P1.jpg',
-      '/assets/image/adventure/Rafting/P2.jpg',
-      '/assets/image/adventure/Rafting/P3.jpg',
-      '/assets/image/adventure/Rafting/P4.jpg'
+      '/assets/image/adventure/Rafting/rafting.jpg'
+      // '/assets/image/adventure/Rafting/P2.jpg',
+      // '/assets/image/adventure/Rafting/P3.jpg',
+      // '/assets/image/adventure/Rafting/P4.jpg'
     ],
     duration: '1 day to multi-day',
     difficulty: 'Intermediate',
@@ -121,10 +121,10 @@ const activities: Activity[] = [
     image: '/assets/image/poonhill.jpg',
     bannerImage: '/assets/image/poonhill-banner.jpg',
     sliderImages: [
-      '/assets/image/adventure/Trekking/P1.jpg',
-      '/assets/image/adventure/Trekking/P2.jpg',
-      '/assets/image/adventure/Trekking/P3.jpg',
-      '/assets/image/adventure/Trekking/P4.jpg'
+      '/assets/image/adventure/Trekking/P1.jpg'
+      // '/assets/image/adventure/Trekking/P2.jpg',
+      // '/assets/image/adventure/Trekking/P3.jpg',
+      // '/assets/image/adventure/Trekking/P4.jpg'
     ],
     duration: '4-5 days',
     difficulty: 'Moderate',
@@ -152,10 +152,10 @@ const activities: Activity[] = [
     image: '/assets/image/safari.jpg',
     bannerImage: '/assets/image/safari-banner.jpg',
     sliderImages: [
-      '/assets/image/adventure/Jungle_Safari/P1.jpg',
-      '/assets/image/adventure/Jungle_Safari/P2.jpg',
-      '/assets/image/adventure/Jungle_Safari/P3.jpg',
-      '/assets/image/adventure/Jungle_Safari/P4.jpg'
+      '/assets/image/adventure/Jungle_Safari/jungle-safari.jpg'
+      // '/assets/image/adventure/Jungle_Safari/P2.jpg',
+      // '/assets/image/adventure/Jungle_Safari/P3.jpg',
+      // '/assets/image/adventure/Jungle_Safari/P4.jpg'
     ],
     duration: '1-3 days',
     difficulty: 'Easy',
@@ -183,10 +183,10 @@ const activities: Activity[] = [
     image: '/assets/image/mountaineering.jpg',
     bannerImage: '/assets/image/mountaineering-banner.jpg',
     sliderImages: [
-      '/assets/image/adventure/Mountaineering/P1.jpg',
-      '/assets/image/adventure/Mountaineering/P2.jpg',
-      '/assets/image/adventure/Mountaineering/P3.jpg',
-      '/assets/image/adventure/Mountaineering/P4.jpg'
+      '/assets/image/adventure/Mountaineering/mounting.jpg'
+      // '/assets/image/adventure/Mountaineering/P2.jpg',
+      // '/assets/image/adventure/Mountaineering/P3.jpg',
+      // '/assets/image/adventure/Mountaineering/P4.jpg'
     ],
     duration: '10-30 days (depending on peak)',
     difficulty: 'Advanced',
@@ -214,10 +214,10 @@ const activities: Activity[] = [
     image: '/assets/image/biking.jpg',
     bannerImage: '/assets/image/biking-banner.jpg',
     sliderImages: [
-      '/assets/image/adventure/Mountain_Biking/P1.jpg',
-      '/assets/image/adventure/Mountain_Biking/P2.jpg',
-      '/assets/image/adventure/Mountain_Biking/P3.jpg',
-      '/assets/image/adventure/Mountain_Biking/P4.jpg'
+      '/assets/image/adventure/Mountain_Biking/mountain-biking.jpg'
+      // '/assets/image/adventure/Mountain_Biking/P2.jpg',
+      // '/assets/image/adventure/Mountain_Biking/P3.jpg',
+      // '/assets/image/adventure/Mountain_Biking/P4.jpg'
     ],
     duration: 'Half-day to multi-day trips',
     difficulty: 'Moderate to Advanced',
@@ -245,10 +245,11 @@ const activities: Activity[] = [
     image: '/assets/image/climbing.jpg',
     bannerImage: '/assets/image/climbing-banner.jpg',
     sliderImages: [
-      '/assets/image/adventure/Rock_Climbing/P1.jpg',
-      '/assets/image/adventure/Rock_Climbing/P2.jpg',
-      '/assets/image/adventure/Rock_Climbing/P3.jpg',
-      '/assets/image/adventure/Rock_Climbing/P4.jpg'
+      '/assets/image/adventure/Rock_Climbing/rock-climbing.jpg'
+      // '/assets/image/adventure/Rock_Climbing/P1.jpg',
+      // '/assets/image/adventure/Rock_Climbing/P2.jpg',
+      // '/assets/image/adventure/Rock_Climbing/P3.jpg',
+      // '/assets/image/adventure/Rock_Climbing/P4.jpg'
     ],
     duration: '2-4 hours',
     difficulty: 'Beginner to Advanced',
@@ -276,10 +277,10 @@ const activities: Activity[] = [
     image: '/assets/image/zipline.jpg',
     bannerImage: '/assets/image/zipline-banner.jpg',
     sliderImages: [
-      '/assets/image/adventure/Zip-lining/P1.jpg',
-      '/assets/image/adventure/Zip-lining/P2.jpg',
-      '/assets/image/adventure/Zip-lining/P3.jpg',
-      '/assets/image/adventure/Zip-lining/P4.jpg'
+      '/assets/image/adventure/Zip-lining/zip-lining.jpg'
+      // '/assets/image/adventure/Zip-lining/P2.jpg',
+      // '/assets/image/adventure/Zip-lining/P3.jpg',
+      // '/assets/image/adventure/Zip-lining/P4.jpg'
     ],
     duration: '1-2 hours',
     difficulty: 'Easy',
@@ -428,7 +429,7 @@ const AdventureDetail = () => {
 
           <div className={styles.sidebar}>
             <div className={styles.infoCard}>
-              <h3>Quick Info</h3>
+              {/* <h3>Quick Info</h3>
               <ul>
                 <li><strong>Duration:</strong> {activity.duration}</li>
                 <li><strong>Difficulty:</strong> {activity.difficulty}</li>
@@ -443,7 +444,7 @@ const AdventureDetail = () => {
                 className={styles.bookButton}
               >
                 Book Now
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
