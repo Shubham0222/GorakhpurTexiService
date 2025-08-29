@@ -10,9 +10,10 @@ interface PageMetadataProps {
   type?: string;
 }
 
+
 const PageMetadata = ({ 
-  title = "Best Taxi Service in Gorakhpur | Online Cab Booking",
-  description = "Need a taxi in Gorakhpur? Book online for airport pickup, wedding car rental, and more. Affordable cab service like Uber and Ola.",
+  title = "Taxi in Gorakhpur | Nepal Tour Packages | +91 8887537960",
+  description = "Nepal tour packages from Gorakhpur,Gorakhpur taxi service, Hire & Booking, Airport Pickup, Drop, 24/7 as per your convenience. call : +91 8887537960",
   keywords = "gorakhpur taxi, taxi service gorakhpur, cab booking gorakhpur, airport taxi gorakhpur, car rental gorakhpur, gorakhpur to lucknow taxi service, gorakhpur to delhi taxi service, gorakhpur to allahabad taxi service, gorakhpur to varanasi taxi service, gorakhpur to kanpur taxi service, gorakhpur to agra taxi service, gorakhpur to sitapur taxi service, gorakhpur to ayodhya taxi service, gorakhpur to noida taxi service, gorakhpur to ghaziabad taxi service, gorakhpur to bareilly taxi service, gorakhpur to gurgaon taxi, gorakhpur to darbhanga taxi, gorakhpur to patna taxi, gorakhpur to chapra taxi, gorakhpur to muzaffarpur taxi, gorakhpur to ghazipur taxi, gorakhpur to gaya taxi, gorakhpur to sitamarhi taxi, gorakhpur to begusarai taxi, gorakhpur to motihari taxi, gorakhpur to azamgarh taxi, gorakhpur to sultanpur taxi, gorakhpur to jaunpur taxi, gorakhpur to basti taxi, gorakhpur to balrampur taxi, gorakhpur to sonauli border taxi, gorakhpur to pokhara taxi, gorakhpur to pashupatinath taxi, gorakhpur to kathmandu taxi, gorakhpur to lumbini taxi",
   image = "https://bestgorakhpurtaxi.com/assets/image/logo.jpg",
   type = "website"
@@ -25,11 +26,12 @@ const PageMetadata = ({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "TaxiService",
+
     "name": "Best Gorakhpur Taxi",
     "image": image,
     "description": description,
     "url": baseUrl,
-    "telephone": "+91-XXXXXXXXXX",
+    "telephone": "+918887537960",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Your Street Address",

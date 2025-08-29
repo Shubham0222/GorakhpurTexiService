@@ -23,15 +23,15 @@ const Header = () => {
   const menuItems = [
     { path: "/", label: "Home" },
     { path: "/about", label: "About" },
-    { 
-      path: "/adventure", 
+    {
+      path: "/adventure",
       label: "Activities",
       submenu: [
         { path: "/adventure", label: "Activities in Nepal" },
       ]
     },
-    { 
-      path: "/destinations", 
+    {
+      path: "/destinations",
       label: "Destinations",
       submenu: [
         { path: "/destinations", label: "Popular Destinations" },
@@ -58,25 +58,15 @@ const Header = () => {
           </span>
         </Link>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className={styles.menuButton}
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          <span className={`${styles.menuIcon} ${isMenuOpen ? styles.open : ''}`}></span>
-        </button>
-
-        {/* Desktop Navigation */}
-        <nav className={styles.desktopNav}>
+         <nav className={styles.desktopNav}>
           {menuItems.map((item) => (
-            <div 
+            <div
               key={item.path}
               className={styles.navItem}
             >
               {item.path === "/destinations" ? (
-                <div 
-                  className={styles.navLink} 
+                <div
+                  className={styles.navLink}
                   onClick={toggleDestinations}
                   onMouseEnter={() => setIsDestinationsOpen(true)}
                   onMouseLeave={() => setIsDestinationsOpen(false)}
@@ -85,7 +75,7 @@ const Header = () => {
                   <span className={styles.dropdownArrow}>▼</span>
                   {isDestinationsOpen && (
                     <div className={styles.dropdown}>
-                       {item.submenu?.map((subItem) => (
+                      {item.submenu?.map((subItem) => (
                         <Link
                           key={subItem.path}
                           to={subItem.path}
@@ -98,7 +88,7 @@ const Header = () => {
                   )}
                 </div>
               ) : item.path === "/adventure" ? (
-                <div 
+                <div
                   className={styles.navLink}
                   onClick={toggleAdventure}
                   onMouseEnter={() => setIsAdventureOpen(true)}
@@ -129,10 +119,29 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Mobile Navigation */}
+        <div className={styles.toggelPartnerwrap}>
+          <Link to="/" className={styles.logoRight} aria-label="Group of Baba Travels">
+            <img
+              src="/assets/image/logo2.jpg"
+              alt="Group of Baba Travels Logo"
+              className={styles.logoImgRight}
+            />
+            <span className={styles.logoTextGroupRight}>
+              <span className={styles.logoTextMain}>Group of Baba Travels</span>
+              <span className={styles.logoTextSub}>Trusted Travel Partner</span>
+            </span>
+          </Link>
+          <button
+            className={styles.menuButton}
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            <span className={`${styles.menuIcon} ${isMenuOpen ? styles.open : ''}`}></span>
+          </button>
+        </div>
         <AnimatePresence>
           {isMenuOpen && (
-            <motion.nav 
+            <motion.nav
               className={styles.mobileNav}
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -183,7 +192,7 @@ const Header = () => {
                       ))}
                     </div>
                   ) : (
-                    <Link 
+                    <Link
                       to={item.path}
                       className={styles.mobileNavLink}
                       onClick={() => setIsMenuOpen(false)}

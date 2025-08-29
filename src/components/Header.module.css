@@ -9,10 +9,12 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .brand {
   font-size: 1.01rem;
   letter-spacing: 0.03em;
 }
+
 .phone a {
   color: #FFD600;
   text-decoration: underline;
@@ -20,9 +22,78 @@
   margin-left: .38rem;
 }
 
+
+
+.logoRight {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-left: 1.5rem;
+}
+
+.logoImgRight {
+  height: 48px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.logoTextGroupRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 0.7rem;
+  line-height: 1.1;
+}
+
+.logoTextGroupRight .logoTextMain {
+  font-size: 16px;
+  font-weight: 800;
+  color: #FFD600;
+  /* gold */
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.logoTextGroupRight .logoTextSub {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 0.1rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* Responsive shrink */
+@media (max-width: 768px) {
+  .logoImgRight {
+
+    height: 36px;
+    max-width: 80px;
+  }
+
+  .logoTextGroupRight .logoTextMain {
+    font-size: 1rem;
+  }
+
+  .logoTextGroupRight .logoTextSub {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 .navbar {
   background: #fff;
-  box-shadow: 0 2px 8px rgba(24,24,24,.07);
+  box-shadow: 0 2px 8px rgba(24, 24, 24, .07);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,6 +102,7 @@
   position: relative;
   min-height: 70px;
 }
+
 .logoNavContainer {
   display: flex;
   align-items: center;
@@ -39,12 +111,14 @@
   margin-right: 2.2rem;
   position: relative;
 }
+
 .logo {
   display: flex;
   align-items: center;
   text-decoration: none;
   margin-top: 5px;
 }
+
 .logoImg {
   height: 48px;
   width: auto;
@@ -52,17 +126,20 @@
   object-fit: contain;
   border-radius: 8px;
   background: #fff;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
+
 .logoFallback {
   display: none;
   position: absolute;
-  left: 0; top: 0;
+  left: 0;
+  top: 0;
   color: #FFD600;
   font-weight: bold;
   font-size: 2.4rem;
   font-family: 'Montserrat', Arial, sans-serif;
 }
+
 .logoTextGroup {
   display: flex;
   flex-direction: column;
@@ -70,20 +147,23 @@
   margin-left: 0.7rem;
   line-height: 1.1;
 }
+
 .logoTextMain {
-  font-size: 1.30rem;
+  font-size: 16px;
   font-weight: 800;
   color: #FFD600;
   letter-spacing: 0.01em;
   font-family: 'Montserrat', Arial, sans-serif;
 }
+
 .logoTextSub {
-  font-size: 1.02rem;
+  font-size: 12px;
   font-weight: 700;
   color: #ffffff;
   margin-top: 0.1rem;
   font-family: 'Montserrat', Arial, sans-serif;
 }
+
 .links {
   display: flex;
   align-items: center;
@@ -92,6 +172,7 @@
   margin: 0;
   padding: 0;
 }
+
 .link {
   color: #242424;
   font-size: 1.15rem;
@@ -102,41 +183,50 @@
   transition: background .15s, color .15s;
   letter-spacing: 0.01em;
 }
+
 .link:hover {
   background: #ffd60033;
   color: #181818;
 }
+
 @media (max-width: 900px) {
   .navbar {
     flex-direction: column;
     padding: .85rem .5rem;
     min-height: 100px;
   }
+
   .logoNavContainer {
     margin-right: 0;
     margin-bottom: 1.1rem;
   }
+
   .links {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
   }
 }
+
 @media (max-width: 500px) {
   .navbar {
     padding: .5rem .2rem;
   }
+
   .logo {
     height: 38px;
     width: 38px;
   }
+
   .logoImg {
     height: 36px;
     max-width: 80px;
   }
+
   .brand {
     font-size: 0.98rem;
   }
+
   .link {
     font-size: .99rem;
     padding: 0.23rem 0.49rem;
@@ -173,7 +263,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
+
   color: white;
   text-decoration: none;
   font-weight: 500;
@@ -227,6 +317,7 @@
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -339,7 +430,7 @@
 
   .desktopNav {
     display: flex;
-    gap: 1rem;
+    gap: 18px;
   }
 
   .mobileNav {
@@ -367,6 +458,7 @@
   0% {
     transform: translateX(100%);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -374,6 +466,29 @@
 
 @media (max-width: 768px) {
   .marqueeWrapper {
+    display: none;
+  }
+.header{
+  padding: 0;
+}
+  
+  .toggelPartnerwrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-right: 20px;
+  }
+
+  .logoRight{
+    margin-left: 0;
+  }
+
+  .menuButton{
+    margin-right: 0;
+  }
+
+  .logoTextGroupRight {
     display: none;
   }
 
@@ -395,12 +510,12 @@
   }
 
   .logoTextMain {
-    font-size: 1rem;
+    font-size: 14px;
     line-height: 1.2;
   }
 
   .logoTextSub {
-    font-size: 0.8rem;
+    font-size: 10px;
     margin-top: 0;
   }
 
@@ -433,17 +548,19 @@
     margin-right: -0.5rem;
   }
 
-  .menuIcon, 
-  .menuIcon::before, 
+  .menuIcon,
+  .menuIcon::before,
   .menuIcon::after {
     width: 24px;
   }
 }
+
 @media (max-width: 500px) {
   .logoTextMain {
-   width: 217px;
+    width: 217px;
   }
 }
+
 @media (max-width: 360px) {
   .logoTextMain {
     font-size: 0.9rem;

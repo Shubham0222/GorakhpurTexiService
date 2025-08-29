@@ -3,7 +3,7 @@ import styles from './FloatingButtons.module.css';
 
 const FloatingButtons = () => {
   // Phone number for both calling and WhatsApp
-  const phoneNumber = '+919026793233';
+  const phoneNumber = '+918887537960';
   
   // WhatsApp message template
   const whatsappMessage = 'Hello! I would like to book a taxi.';

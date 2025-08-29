@@ -5,7 +5,7 @@ import styles from './AssistanceCtaBand.module.css';
 
 const AssistanceCtaBand = () => {
   const handleMapClick = () => {
-    window.open(`https://www.google.com/maps?q=26.751063,83.349249`, '_blank');
+    window.open(`https://www.google.com/maps?q=26.71374,83.402173`, '_blank');
   };
 
   return (
@@ -39,13 +39,13 @@ const AssistanceCtaBand = () => {
                 <span className={styles.label}>Email Us</span>
                 <span className={styles.value}>
                   support@bestgorakhpurtaxi.com
-                  bestgorakhpurtaxi@gmail.com
+                  
                 </span>
               </div>
             </motion.a>
 
             <motion.a 
-              href="tel:+919026793233"
+              href="tel:+918887537960"
               className={styles.contactItem}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -58,7 +58,7 @@ const AssistanceCtaBand = () => {
               <div className={styles.contactDetails}>
                 <span className={styles.label}>Call Us</span>
                 <span className={styles.value}>
-                  +91 9026793233
+                  +91 8887537960 , +91 9026793233
                 </span>
               </div>
             </motion.a>
@@ -76,9 +76,9 @@ const AssistanceCtaBand = () => {
                 </svg>
               </div>
               <div className={styles.contactDetails}>
-                <span className={styles.label}>Visit Us</span>
+                <span className={styles.label}>Head Office</span>
                 <span className={styles.value}>
-                  House No. 12, Dalmeal Mirzapur Gorakhpur, Uttar Pradesh, 273005
+                  LIG 161, Buddha Vihar Part C, Gorakhpur, Uttar Pradesh
                 </span>
               </div>
             </motion.div>

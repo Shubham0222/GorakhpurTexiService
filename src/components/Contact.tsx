@@ -67,7 +67,7 @@ const Contact = () => {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -78,33 +78,24 @@ const Contact = () => {
         </motion.div>
 
         <div className={styles.content}>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className={styles.contactInfo}
           >
             <div className={styles.infoCard}>
-              <div className={styles.infoItem}>
-                <div className={styles.iconWrapper}>
-                  <svg className={styles.icon} viewBox="0 0 24 24">
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                  </svg>
-                </div>
-                <div className={styles.infoContent}>
-                  <h3 className={styles.infoTitle}>Owner</h3>
-                  <p className={styles.infoValue}>Shailesh Bharti</p>
-                </div>
-              </div>
+
 
               <div className={styles.infoItem}>
                 <div className={styles.iconWrapper}>
                   <svg className={styles.icon} viewBox="0 0 24 24">
-                    <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                    <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z" />
                   </svg>
                 </div>
                 <div className={styles.infoContent}>
                   <h3 className={styles.infoTitle}>Call Us</h3>
+                  <a className={styles.infoValue} href="tel:+918887537960">+91 8887537960</a> <span>,</span>
                   <a className={styles.infoValue} href="tel:+919026793233">+91 9026793233</a>
                 </div>
               </div>
@@ -112,7 +103,7 @@ const Contact = () => {
               <div className={styles.infoItem}>
                 <div className={styles.iconWrapper}>
                   <svg className={styles.icon} viewBox="0 0 24 24">
-                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                   </svg>
                 </div>
                 <div className={styles.infoContent}>
@@ -121,17 +112,15 @@ const Contact = () => {
                     <a className={styles.infoValue} href="mailto:support@bestgorakhpurtaxi.com">
                       support@bestgorakhpurtaxi.com
                     </a>
-                    <a className={styles.infoValue} href="mailto:bestgorakhpurtaxi@gmail.com">
-                      bestgorakhpurtaxi@gmail.com
-                    </a>
                   </div>
                 </div>
               </div>
 
-              <div className={styles.infoItem}>
+              {/* <div className={styles.infoItem}>
                 <div className={styles.iconWrapper}>
                   <svg className={styles.icon} viewBox="0 0 24 24">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 
+      2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                   </svg>
                 </div>
                 <div className={styles.infoContent}>
@@ -140,7 +129,72 @@ const Contact = () => {
                     House No. 12, Dalmeal Mirzapur Gorakhpur, Uttar Pradesh, 273005
                   </p>
                 </div>
+              </div> */}
+
+              <div className={styles.infoItem}>
+                <div className={styles.iconWrapper}>
+                  <svg className={styles.icon} viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 13h18v8H3v-8zm2 2v4h4v-4H5zm6 0v4h4v-4h-4zm6 0v4h4v-4h-4zM3 3h8v8H3V3zm10 0h8v4h-8V3zm0 6h8v2h-8V9z" />
+                  </svg>
+
+                </div>
+                <div className={styles.infoContent}>
+                  <h3 className={styles.infoTitle}>Head Office</h3>
+                  <p className={styles.infoValue}>
+                    LIG 161, Buddha Vihar Part C, Gorakhpur, Uttar Pradesh
+                  </p>
+                </div>
               </div>
+
+              <div className={styles.infoItem}>
+                <div className={styles.iconWrapper}>
+                  <svg className={styles.icon} viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 
+  13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 
+  9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 
+  12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 
+  12 11.5z"/>
+                  </svg>
+
+                </div>
+                <div className={styles.infoContent}>
+                  <h3 className={styles.infoTitle}>Booking Branch 1</h3>
+                  <p className={styles.infoValue}>
+                    91, Station Road, Bodarwar, Kushinagar, Uttar Pradesh
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.infoItem}>
+                <div className={styles.iconWrapper}>
+                  <svg className={styles.icon} viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 
+      2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                </div>
+                <div className={styles.infoContent}>
+                  <h3 className={styles.infoTitle}>Booking Branch 2</h3>
+                  <p className={styles.infoValue}>
+                    Indra Nagar, Ward No. 6, Maharajganj, Uttar Pradesh
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.infoItem}>
+                <div className={styles.iconWrapper}>
+                  <svg className={styles.icon} viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 
+      2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                </div>
+                <div className={styles.infoContent}>
+                  <h3 className={styles.infoTitle}>Booking Branch 3</h3>
+                  <p className={styles.infoValue}>
+                    Lala Tola, Vir Abbdul Nagar, Kasia Bazaar, Kushinagar, Uttar Pradesh
+                  </p>
+                </div>
+              </div>
+
             </div>
           </motion.div>
 
@@ -153,52 +207,52 @@ const Contact = () => {
             className={styles.form}
           >
             <div className={styles.formGroup}>
-              <input 
-                className={styles.input} 
-                type="text" 
+              <input
+                className={styles.input}
+                type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your Name"
-                required 
+                required
               />
             </div>
             <div className={styles.formGroup}>
-              <input 
-                className={styles.input} 
-                type="email" 
+              <input
+                className={styles.input}
+                type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Your Email"
-                required 
+                required
               />
             </div>
             <div className={styles.formGroup}>
-              <input 
-                className={styles.input} 
-                type="tel" 
+              <input
+                className={styles.input}
+                type="tel"
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="Your Phone"
-                required 
+                required
               />
             </div>
             <div className={styles.formGroup}>
-              <textarea 
-                className={styles.textarea} 
+              <textarea
+                className={styles.textarea}
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Your Message"
-                required 
+                required
               />
             </div>
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              type="submit" 
+              type="submit"
               className={styles.submitButton}
               disabled={status.submitting}
             >
@@ -206,7 +260,7 @@ const Contact = () => {
             </motion.button>
 
             {status.submitted && (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 className={styles.successMessage}
@@ -216,7 +270,7 @@ const Contact = () => {
             )}
 
             {status.error && (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 className={styles.errorMessage}
@@ -226,7 +280,7 @@ const Contact = () => {
             )}
           </motion.form>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -242,7 +296,7 @@ const Contact = () => {
               referrerPolicy="no-referrer-when-downgrade"
               title="Best Gorakhpur Taxi Location"
             />
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </main>

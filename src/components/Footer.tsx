@@ -302,9 +302,9 @@ const Footer: React.FC = () => {
         <div className={styles.mainContent}>
           <div className={styles.brandSection}>
             <div className={styles.logoContainer}>
-              <img 
-                src="/assets/image/logo.jpg" 
-                alt="Gorakhpur Taxi Service Logo" 
+              <img
+                src="/assets/image/logo.jpg"
+                alt="Gorakhpur Taxi Service Logo"
                 className={styles.logo}
               />
             </div>
@@ -321,13 +321,13 @@ const Footer: React.FC = () => {
               <ul className={styles.list}>
                 {popularDestinations.map((destination) => (
                   <li key={destination.id}>
-                    <Link 
-                      to={`/destinations/${destination.slug}`} 
+                    <Link
+                      to={`/destinations/${destination.slug}`}
                       className={styles.link}
                       onClick={(e) => {
                         e.preventDefault();
                         const message = `I want taxi for ${destination.title}`;
-                        const whatsappUrl = `https://wa.me/919026793233?text=${encodeURIComponent(message)}`;
+                        const whatsappUrl = `https://wa.me/918887537960?text=${encodeURIComponent(message)}`;
                         window.open(whatsappUrl, '_blank');
                       }}
                     >
@@ -343,13 +343,13 @@ const Footer: React.FC = () => {
               <ul className={styles.list}>
                 {moreDestinations.map((destination) => (
                   <li key={destination.id}>
-                    <Link 
-                      to={`/destinations/${destination.slug}`} 
+                    <Link
+                      to={`/destinations/${destination.slug}`}
                       className={styles.link}
                       onClick={(e) => {
                         e.preventDefault();
                         const message = `I want taxi for ${destination.title}`;
-                        const whatsappUrl = `https://wa.me/919026793233?text=${encodeURIComponent(message)}`;
+                        const whatsappUrl = `https://wa.me/918887537960?text=${encodeURIComponent(message)}`;
                         window.open(whatsappUrl, '_blank');
                       }}
                     >
@@ -365,8 +365,8 @@ const Footer: React.FC = () => {
               <ul className={styles.contactList}>
                 <li className={styles.contactItem}>
                   <span className={styles.contactIcon}>📞</span>
-                  <a href="tel:+919026793233" className={styles.contactHighlight}>
-                    +91 9026793233
+                  <a href="tel:+918887537960" className={styles.contactHighlight}>
+                    +91 8887537960
                   </a>
                 </li>
                 <li className={styles.contactItem}>
@@ -375,19 +375,53 @@ const Footer: React.FC = () => {
                     <a href="mailto:support@bestgorakhpurtaxi.com" className={styles.contactHighlight}>
                       support@bestgorakhpurtaxi.com
                     </a>
-                    <a href="mailto:bestgorakhpurtaxi@gmail.com" className={styles.contactHighlight}>
-                      bestgorakhpurtaxi@gmail.com
+                    <a href="mailto:" className={styles.contactHighlight}>
+
                     </a>
                   </div>
                 </li>
-                <li className={`${styles.contactItem} ${styles.address}`}>
-                  <span className={styles.contactIcon}>📍</span>
-                  <span className={styles.contactHighlight}>
-                    Head Office - House No. 12,<br />
-                    Dalmeal Mirzapur Gorakhpur,<br />
-                    Uttar Pradesh, 273005
-                  </span>
-                </li>
+                <ul className={styles.contactList}>
+                  {/* Head Office */}
+                  <li className={`${styles.contactItem} ${styles.address}`}>
+                    <span className={styles.contactIcon}>📍</span>
+                    <span className={styles.contactHighlight}>
+                      <strong>Head Office</strong><br />
+                      LIG 161, Buddha Vihar Part C,<br />
+                      Gorakhpur, Uttar Pradesh 273005
+                    </span>
+                  </li>
+
+                  {/* Booking Center 1 */}
+                  <li className={`${styles.contactItem} ${styles.address}`}>
+                    <span className={styles.contactIcon}>📍</span>
+                    <span className={styles.contactHighlight}>
+                      <strong>Booking Center 1</strong><br />
+                      91 Station Road, Bodarwar,<br />
+                      Kushinagar, Uttar Pradesh
+                    </span>
+                  </li>
+
+                  {/* Booking Center 2 */}
+                  <li className={`${styles.contactItem} ${styles.address}`}>
+                    <span className={styles.contactIcon}>📍</span>
+                    <span className={styles.contactHighlight}>
+                      <strong>Booking Center 2</strong><br />
+                      Indra Nagar, Ward No. 6,<br />
+                      Maharajganj, Uttar Pradesh
+                    </span>
+                  </li>
+
+                  {/* Booking Center 3 */}
+                  <li className={`${styles.contactItem} ${styles.address}`}>
+                    <span className={styles.contactIcon}>📍</span>
+                    <span className={styles.contactHighlight}>
+                      <strong>Booking Center 3</strong><br />
+                      Lala Tola, Vir Abdul Nagar,<br />
+                      Kasia Bazaar, Kushinagar, Uttar Pradesh
+                    </span>
+                  </li>
+                </ul>
+
               </ul>
             </div>
           </div>

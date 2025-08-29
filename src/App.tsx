@@ -196,11 +196,11 @@ function App() {
           <Route path="/" element={
             <>
               <PageMetadata 
-                title="Best Taxi Service in Gorakhpur | Online Cab Booking"
-                description="Need a taxi in Gorakhpur? Book online for airport pickup, wedding car rental, and more. Affordable cab service like Uber and Ola."
+                title="Taxi in Gorakhpur | Nepal Tour Packages | +91 8887537960"
+                description="Nepal tour packages from Gorakhpur,Gorakhpur taxi service, Hire & Booking, Airport Pickup, Drop, 24/7 as per your convenience. call : +91 8887537960"
               />
               <Home />
-            </>
+            </> 
           } />
           <Route path="/about" element={
             <>
@@ -279,12 +279,14 @@ function App() {
           } />
         </Routes>
         <FloatingButtons />
+
+        
         <section className="w-full bg-gradient-to-r from-yellow-400 to-yellow-200 py-10 px-6 flex flex-col items-center text-center">
           <h3 className="text-2xl md:text-3xl font-bold text-[var(--brand-black)] mb-2">The Best Rates & Comfort Journey</h3>
           <p className="md:max-w-2xl text-gray-800 mb-6">
-            Gorakhpur Airport Cab, Car Rental, Taxi Hire & Booking, Airport Pickup, Drop,<br/> 24/7 as per your convenience. <br/><b>Call:</b> <a href="tel:+919026793233" className="underline font-bold gold">+91 9026793233</a>
+            Nepal tour packages from Gorakhpur,Gorakhpur taxi service,Taxi Hire & Booking, Airport Pickup, Drop,<br/> 24/7 as per your convenience. <br/><b>Call:</b> <a href="tel:+918887537960" className="underline font-bold gold">+91 8887537960</a>
           </p>
-          <a href="tel:+919026793233" className="rounded-full px-8 py-3 bg-[var(--brand-black)] text-[var(--brand-gold)] font-bold shadow hover:opacity-90 transition">Call Now</a>
+          <a href="tel:+918887537960" className="rounded-full px-8 py-3 bg-[var(--brand-black)] text-[var(--brand-gold)] font-bold shadow hover:opacity-90 transition">Call Now</a>
         </section>
         <Footer />
       </div>
